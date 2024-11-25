@@ -1,0 +1,134 @@
+{
+  "timestamp": "2024-11-25T15:24:41.252061",
+  "original_filename": "deel-Hilary_Wagner-contract-38epgwj_1.pdf",
+  "analysis": {
+    "analysis": {
+      "metadata": {
+        "contractDate": "2024-05-04",
+        "parties": {
+          "company": "Tribe Wellness Sales",
+          "contractor": "Ryan Alexander Register"
+        },
+        "jurisdiction": "TEXAS OF UNITED STATES",
+        "governingLaw": "laws of the TEXAS OF UNITED STATES"
+      },
+      "classification": {
+        "type": "INDEPENDENT_CONTRACTOR",
+        "primaryCharacteristics": [
+          "Contractor determines manner and means of performing services",
+          "Contractor uses own equipment and facilities",
+          "Contractor can appoint subcontractors",
+          "Contractor is not eligible for employee benefits",
+          "Contractor responsible for own equipment",
+          "Contractor paid on commission basis",
+          "No benefits provided"
+        ]
+      },
+      "compensation": {
+        "baseCompensation": {
+          "type": "PROJECT_BASED",
+          "amount": null,
+          "currency": "USD",
+          "frequency": "PROJECT",
+          "isGuaranteed": false
+        },
+        "commission": {
+          "type": "TIERED",
+          "baseRate": 0.2,
+          "tiers": [
+            {
+              "threshold": 25000,
+              "rate": 0.25
+            }
+          ],
+          "caps": {
+            "exists": false
+          }
+        }
+      },
+      "termination": {
+        "noticePeriod": {
+          "days": 0,
+          "isReciprocal": false
+        },
+        "immediateTerminationClauses": [
+          "Non-Communication or Unresponsiveness",
+          "Poor-Quality Work and Revisions",
+          "Repeated Missed Appointments",
+          "Excessive Absenteeism",
+          "Breach of Contract Terms",
+          "Intentional Misconduct"
+        ],
+        "postTerminationObligations": []
+      },
+      "intellectualProperty": {
+        "ownership": {
+          "workProduct": "COMPANY",
+          "scope": []
+        },
+        "moralRights": {
+          "waived": true,
+          "scope": []
+        }
+      },
+      "restrictiveCovenants": {
+        "nonCompete": {
+          "geographicScope": [],
+          "businessScope": [],
+          "exceptions": [],
+          "duration": 1
+        },
+        "nonSolicitation": {
+          "applies": {
+            "customers": "not_found_in_chunk",
+            "employees": "not_found_in_chunk",
+            "suppliers": "not_found_in_chunk"
+          },
+          "exceptions": [],
+          "duration": 1
+        }
+      },
+      "confidentiality": {
+        "scope": [
+          "all information Client provides to Contractor",
+          "information pertaining to the Services performed by Contractor",
+          "all Contractor Work Product",
+          "Client's Intellectual Property",
+          "this Agreement",
+          "information regarding Client's business"
+        ],
+        "duration": {
+          "type": "PERPETUAL"
+        },
+        "exceptions": [
+          "information already in the public domain"
+        ]
+      },
+      "liability": {
+        "indemnification": {
+          "scope": [
+            "Breach of agreement",
+            "Data protection obligations",
+            "violation or claimed violation of a third party's rights resulting in whole or in part from the Client's use of such third party's confidential information by Contractor"
+          ],
+          "limitations": [],
+          "insuranceRequired": true
+        },
+        "limitations": {
+          "capsExist": false,
+          "exclusions": [
+            "economic losses",
+            "loss of goodwill or reputation",
+            "special, indirect or consequential losses"
+          ],
+          "capAmount": "undisputed outstanding balances owed to contractor"
+        }
+      }
+    },
+    "metadata": {
+      "timestamp": "2024-11-25T15:24:41.251035",
+      "filename": "deel-Hilary_Wagner-contract-38epgwj_1.pdf",
+      "filesize": 252304
+    }
+  }
+}

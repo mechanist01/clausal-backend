@@ -1,0 +1,126 @@
+{
+    "metadata": {
+        "contractDate": "YYYY-MM-DD",
+        "parties": {
+            "company": "string",
+            "contractor": "string"
+        },
+        "jurisdiction": "string",
+        "governingLaw": "string"
+    },
+    "classification": {
+        "type": "EMPLOYMENT | INDEPENDENT_CONTRACTOR | HYBRID",
+        "primaryCharacteristics": []
+    },
+    "compensation": {
+        "baseCompensation": {
+            "type": "SALARY | COMMISSION | HYBRID | PROJECT_BASED",
+            "amount": 0,
+            "currency": "string",
+            "frequency": "WEEKLY | BI_WEEKLY | MONTHLY | PROJECT",
+            "isGuaranteed": false
+        },
+        "commission": {
+            "type": "FLAT | TIERED | PROGRESSIVE",
+            "baseRate": 0,
+            "tiers": [
+                {
+                    "threshold": 0,
+                    "rate": 0
+                }
+            ],
+            "caps": {
+                "exists": false,
+                "amount": 0
+            }
+        },
+        "expenses": {
+            "isReimbursed": false,
+            "requiresPreApproval": false,
+            "restrictions": []
+        },
+        "benefits": {
+            "healthInsurance": {
+                "provided": false,
+                "employerContribution": 0
+            },
+            "equipment": {
+                "provided": false,
+                "allowance": 0
+            },
+            "paidTimeOff": {
+                "days": 0,
+                "restrictions": []
+            }
+        }
+    },
+    "termination": {
+        "noticePeriod": {
+            "days": 0,
+            "isReciprocal": false
+        },
+        "immediateTerminationClauses": [],
+        "severanceProvisions": {
+            "exists": false,
+            "amount": 0,
+            "conditions": []
+        },
+        "postTerminationObligations": []
+    },
+    "intellectualProperty": {
+        "ownership": {
+            "workProduct": "COMPANY | CONTRACTOR | SHARED",
+            "preExistingIP": "COMPANY | CONTRACTOR | SHARED",
+            "scope": []
+        },
+        "moralRights": {
+            "waived": false,
+            "scope": []
+        },
+        "compensation": {
+            "additionalCompensation": false,
+            "terms": "string"
+        }
+    },
+    "restrictiveCovenants": {
+        "nonCompete": {
+            "duration": 0,
+            "geographicScope": [],
+            "businessScope": [],
+            "exceptions": []
+        },
+        "nonSolicitation": {
+            "duration": 0,
+            "applies": {
+                "customers": false,
+                "employees": false,
+                "suppliers": false
+            },
+            "exceptions": []
+        }
+    },
+    "confidentiality": {
+        "scope": [],
+        "duration": {
+            "type": "PERPETUAL | LIMITED",
+            "years": 0
+        },
+        "exceptions": [],
+        "returnOfMaterials": {
+            "required": false,
+            "timeframe": "string"
+        }
+    },
+    "liability": {
+        "indemnification": {
+            "scope": [],
+            "limitations": [],
+            "insuranceRequired": false
+        },
+        "limitations": {
+            "capsExist": false,
+            "capAmount": 0,
+            "exclusions": []
+        }
+    }
+}

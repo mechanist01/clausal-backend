@@ -1,0 +1,1187 @@
+2024-11-23 12:15:54,547 - INFO - Starting Flask server...
+2024-11-23 12:15:54,603 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-23 12:15:54,605 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 12:15:54,619 - INFO -  * Restarting with stat
+2024-11-23 12:15:56,160 - INFO - Starting Flask server...
+2024-11-23 12:15:56,187 - WARNING -  * Debugger is active!
+2024-11-23 12:15:56,207 - INFO -  * Debugger PIN: 797-896-514
+2024-11-23 12:16:34,348 - INFO - Starting contract analysis request
+2024-11-23 12:16:34,361 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 12:16:34,441 - INFO - PDF has 22 pages
+2024-11-23 12:16:34,485 - INFO - Extracted 2278 characters from page 1
+2024-11-23 12:16:34,495 - INFO - Extracted 2852 characters from page 2
+2024-11-23 12:16:34,505 - INFO - Extracted 2728 characters from page 3
+2024-11-23 12:16:34,518 - INFO - Extracted 2998 characters from page 4
+2024-11-23 12:16:34,528 - INFO - Extracted 2876 characters from page 5
+2024-11-23 12:16:34,539 - INFO - Extracted 3122 characters from page 6
+2024-11-23 12:16:34,547 - INFO - Extracted 3090 characters from page 7
+2024-11-23 12:16:34,561 - INFO - Extracted 3298 characters from page 8
+2024-11-23 12:16:34,570 - INFO - Extracted 2708 characters from page 9
+2024-11-23 12:16:34,578 - INFO - Extracted 2398 characters from page 10
+2024-11-23 12:16:34,589 - INFO - Extracted 2853 characters from page 11
+2024-11-23 12:16:34,596 - INFO - Extracted 2469 characters from page 12
+2024-11-23 12:16:34,604 - INFO - Extracted 2400 characters from page 13
+2024-11-23 12:16:34,612 - INFO - Extracted 2869 characters from page 14
+2024-11-23 12:16:34,624 - INFO - Extracted 1641 characters from page 15
+2024-11-23 12:16:34,629 - INFO - Extracted 1398 characters from page 16
+2024-11-23 12:16:34,636 - INFO - Extracted 1589 characters from page 17
+2024-11-23 12:16:34,642 - INFO - Extracted 1656 characters from page 18
+2024-11-23 12:16:34,648 - INFO - Extracted 1214 characters from page 19
+2024-11-23 12:16:34,652 - INFO - Extracted 157 characters from page 20
+2024-11-23 12:16:34,654 - INFO - Extracted 308 characters from page 21
+2024-11-23 12:16:34,657 - INFO - Extracted 261 characters from page 22
+2024-11-23 12:16:34,661 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 12:16:34,662 - ERROR - Error processing contract: 'Could not automatically map claude-3-sonnet to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+2024-11-23 12:16:34,665 - ERROR - Error in contract analysis: 'Could not automatically map claude-3-sonnet to a tokeniser. Please use `tiktoken.get_encoding` to explicitly get the tokeniser you expect.'
+2024-11-23 12:16:34,672 - INFO - 127.0.0.1 - - [23/Nov/2024 12:16:34] "[35m[1mPOST /analyze HTTP/1.1[0m" 500 -
+2024-11-23 12:21:55,311 - INFO - Starting Flask server...
+2024-11-23 12:21:55,369 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-23 12:21:55,372 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 12:21:55,385 - INFO -  * Restarting with stat
+2024-11-23 12:21:56,798 - INFO - Starting Flask server...
+2024-11-23 12:21:56,825 - WARNING -  * Debugger is active!
+2024-11-23 12:21:56,849 - INFO -  * Debugger PIN: 797-896-514
+2024-11-23 12:22:03,674 - INFO - Starting contract analysis request
+2024-11-23 12:22:03,686 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 12:22:03,727 - INFO - PDF has 22 pages
+2024-11-23 12:22:03,754 - INFO - Extracted 2278 characters from page 1
+2024-11-23 12:22:03,762 - INFO - Extracted 2852 characters from page 2
+2024-11-23 12:22:03,773 - INFO - Extracted 2728 characters from page 3
+2024-11-23 12:22:03,784 - INFO - Extracted 2998 characters from page 4
+2024-11-23 12:22:03,793 - INFO - Extracted 2876 characters from page 5
+2024-11-23 12:22:03,805 - INFO - Extracted 3122 characters from page 6
+2024-11-23 12:22:03,816 - INFO - Extracted 3090 characters from page 7
+2024-11-23 12:22:03,826 - INFO - Extracted 3298 characters from page 8
+2024-11-23 12:22:03,836 - INFO - Extracted 2708 characters from page 9
+2024-11-23 12:22:03,844 - INFO - Extracted 2398 characters from page 10
+2024-11-23 12:22:03,856 - INFO - Extracted 2853 characters from page 11
+2024-11-23 12:22:03,870 - INFO - Extracted 2469 characters from page 12
+2024-11-23 12:22:03,876 - INFO - Extracted 2400 characters from page 13
+2024-11-23 12:22:03,886 - INFO - Extracted 2869 characters from page 14
+2024-11-23 12:22:03,894 - INFO - Extracted 1641 characters from page 15
+2024-11-23 12:22:03,900 - INFO - Extracted 1398 characters from page 16
+2024-11-23 12:22:03,906 - INFO - Extracted 1589 characters from page 17
+2024-11-23 12:22:03,912 - INFO - Extracted 1656 characters from page 18
+2024-11-23 12:22:03,916 - INFO - Extracted 1214 characters from page 19
+2024-11-23 12:22:03,921 - INFO - Extracted 157 characters from page 20
+2024-11-23 12:22:03,923 - INFO - Extracted 308 characters from page 21
+2024-11-23 12:22:03,924 - INFO - Extracted 261 characters from page 22
+2024-11-23 12:22:03,929 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 12:22:06,625 - INFO - Starting contract analysis
+2024-11-23 12:22:06,657 - INFO - Split text into 3 chunks
+2024-11-23 12:22:06,658 - INFO - Created 3 chunks for analysis
+2024-11-23 12:22:06,660 - INFO - Analyzing chunk 1/3
+2024-11-23 12:22:21,025 - INFO - Completed analysis of chunk 1/3
+2024-11-23 12:22:21,026 - INFO - Analyzing chunk 2/3
+2024-11-23 12:22:36,326 - INFO - Completed analysis of chunk 2/3
+2024-11-23 12:22:36,328 - INFO - Analyzing chunk 3/3
+2024-11-23 12:22:51,688 - INFO - Completed analysis of chunk 3/3
+2024-11-23 12:22:51,690 - INFO - Completed contract analysis
+2024-11-23 12:22:51,696 - INFO - 127.0.0.1 - - [23/Nov/2024 12:22:51] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 12:24:27,770 - INFO - Starting contract analysis request
+2024-11-23 12:24:27,818 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-23 12:24:27,850 - INFO - PDF has 9 pages
+2024-11-23 12:24:27,880 - INFO - Extracted 2288 characters from page 1
+2024-11-23 12:24:27,884 - INFO - Extracted 2730 characters from page 2
+2024-11-23 12:24:27,890 - INFO - Extracted 1768 characters from page 3
+2024-11-23 12:24:27,897 - INFO - Extracted 4353 characters from page 4
+2024-11-23 12:24:27,904 - INFO - Extracted 4182 characters from page 5
+2024-11-23 12:24:27,912 - INFO - Extracted 3619 characters from page 6
+2024-11-23 12:24:27,917 - INFO - Extracted 2161 characters from page 7
+2024-11-23 12:24:27,926 - INFO - Extracted 832 characters from page 8
+2024-11-23 12:24:27,933 - INFO - Extracted 465 characters from page 9
+2024-11-23 12:24:27,934 - INFO - Successfully extracted total of 22406 characters
+2024-11-23 12:24:27,936 - INFO - Starting contract analysis
+2024-11-23 12:24:27,955 - INFO - Split text into 2 chunks
+2024-11-23 12:24:27,956 - INFO - Created 2 chunks for analysis
+2024-11-23 12:24:27,958 - INFO - Analyzing chunk 1/2
+2024-11-23 12:24:42,599 - INFO - Completed analysis of chunk 1/2
+2024-11-23 12:24:42,601 - INFO - Analyzing chunk 2/2
+2024-11-23 12:24:57,309 - INFO - Completed analysis of chunk 2/2
+2024-11-23 12:24:57,310 - INFO - Completed contract analysis
+2024-11-23 12:24:57,315 - INFO - 127.0.0.1 - - [23/Nov/2024 12:24:57] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 12:46:59,292 - INFO - Starting contract analysis request
+2024-11-23 12:46:59,318 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 12:46:59,376 - INFO - PDF has 22 pages
+2024-11-23 12:46:59,395 - INFO - Extracted 2278 characters from page 1
+2024-11-23 12:46:59,404 - INFO - Extracted 2852 characters from page 2
+2024-11-23 12:46:59,411 - INFO - Extracted 2728 characters from page 3
+2024-11-23 12:46:59,420 - INFO - Extracted 2998 characters from page 4
+2024-11-23 12:46:59,428 - INFO - Extracted 2876 characters from page 5
+2024-11-23 12:46:59,437 - INFO - Extracted 3122 characters from page 6
+2024-11-23 12:46:59,445 - INFO - Extracted 3090 characters from page 7
+2024-11-23 12:46:59,454 - INFO - Extracted 3298 characters from page 8
+2024-11-23 12:46:59,463 - INFO - Extracted 2708 characters from page 9
+2024-11-23 12:46:59,470 - INFO - Extracted 2398 characters from page 10
+2024-11-23 12:46:59,478 - INFO - Extracted 2853 characters from page 11
+2024-11-23 12:46:59,485 - INFO - Extracted 2469 characters from page 12
+2024-11-23 12:46:59,493 - INFO - Extracted 2400 characters from page 13
+2024-11-23 12:46:59,500 - INFO - Extracted 2869 characters from page 14
+2024-11-23 12:46:59,508 - INFO - Extracted 1641 characters from page 15
+2024-11-23 12:46:59,514 - INFO - Extracted 1398 characters from page 16
+2024-11-23 12:46:59,519 - INFO - Extracted 1589 characters from page 17
+2024-11-23 12:46:59,525 - INFO - Extracted 1656 characters from page 18
+2024-11-23 12:46:59,529 - INFO - Extracted 1214 characters from page 19
+2024-11-23 12:46:59,532 - INFO - Extracted 157 characters from page 20
+2024-11-23 12:46:59,534 - INFO - Extracted 308 characters from page 21
+2024-11-23 12:46:59,537 - INFO - Extracted 261 characters from page 22
+2024-11-23 12:46:59,542 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 12:46:59,544 - INFO - Starting contract analysis
+2024-11-23 12:46:59,608 - INFO - Split text into 3 chunks
+2024-11-23 12:46:59,610 - INFO - Created 3 chunks for analysis
+2024-11-23 12:46:59,612 - INFO - Analyzing chunk 1/3
+2024-11-23 12:47:14,175 - INFO - Completed analysis of chunk 1/3
+2024-11-23 12:47:14,177 - INFO - Analyzing chunk 2/3
+2024-11-23 12:47:29,540 - INFO - Completed analysis of chunk 2/3
+2024-11-23 12:47:29,542 - INFO - Analyzing chunk 3/3
+2024-11-23 12:47:44,893 - INFO - Completed analysis of chunk 3/3
+2024-11-23 12:47:44,897 - INFO - Completed contract analysis
+2024-11-23 12:47:44,946 - INFO - 127.0.0.1 - - [23/Nov/2024 12:47:44] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 12:53:41,099 - INFO - Starting contract analysis request
+2024-11-23 12:53:41,109 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 12:53:41,145 - INFO - PDF has 22 pages
+2024-11-23 12:53:41,160 - INFO - Extracted 2278 characters from page 1
+2024-11-23 12:53:41,170 - INFO - Extracted 2852 characters from page 2
+2024-11-23 12:53:41,177 - INFO - Extracted 2728 characters from page 3
+2024-11-23 12:53:41,185 - INFO - Extracted 2998 characters from page 4
+2024-11-23 12:53:41,192 - INFO - Extracted 2876 characters from page 5
+2024-11-23 12:53:41,203 - INFO - Extracted 3122 characters from page 6
+2024-11-23 12:53:41,211 - INFO - Extracted 3090 characters from page 7
+2024-11-23 12:53:41,221 - INFO - Extracted 3298 characters from page 8
+2024-11-23 12:53:41,231 - INFO - Extracted 2708 characters from page 9
+2024-11-23 12:53:41,240 - INFO - Extracted 2398 characters from page 10
+2024-11-23 12:53:41,250 - INFO - Extracted 2853 characters from page 11
+2024-11-23 12:53:41,257 - INFO - Extracted 2469 characters from page 12
+2024-11-23 12:53:41,264 - INFO - Extracted 2400 characters from page 13
+2024-11-23 12:53:41,273 - INFO - Extracted 2869 characters from page 14
+2024-11-23 12:53:41,280 - INFO - Extracted 1641 characters from page 15
+2024-11-23 12:53:41,285 - INFO - Extracted 1398 characters from page 16
+2024-11-23 12:53:41,291 - INFO - Extracted 1589 characters from page 17
+2024-11-23 12:53:41,297 - INFO - Extracted 1656 characters from page 18
+2024-11-23 12:53:41,304 - INFO - Extracted 1214 characters from page 19
+2024-11-23 12:53:41,307 - INFO - Extracted 157 characters from page 20
+2024-11-23 12:53:41,309 - INFO - Extracted 308 characters from page 21
+2024-11-23 12:53:41,312 - INFO - Extracted 261 characters from page 22
+2024-11-23 12:53:41,314 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 12:53:41,316 - INFO - Starting contract analysis
+2024-11-23 12:53:41,346 - INFO - Split text into 3 chunks
+2024-11-23 12:53:41,348 - INFO - Created 3 chunks for analysis
+2024-11-23 12:53:41,350 - INFO - Analyzing chunk 1/3
+2024-11-23 12:53:56,101 - INFO - Completed analysis of chunk 1/3
+2024-11-23 12:53:56,102 - INFO - Analyzing chunk 2/3
+2024-11-23 12:55:41,471 - INFO - Starting Flask server...
+2024-11-23 12:55:41,534 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-23 12:55:41,535 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-23 12:55:41,550 - INFO -  * Restarting with stat
+2024-11-23 12:55:42,974 - INFO - Starting Flask server...
+2024-11-23 12:55:43,000 - WARNING -  * Debugger is active!
+2024-11-23 12:55:43,057 - INFO -  * Debugger PIN: 797-896-514
+2024-11-23 12:55:53,721 - INFO - Starting contract analysis request
+2024-11-23 12:55:53,730 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 12:55:53,757 - INFO - PDF has 22 pages
+2024-11-23 12:55:53,773 - INFO - Extracted 2278 characters from page 1
+2024-11-23 12:55:53,803 - INFO - Extracted 2852 characters from page 2
+2024-11-23 12:55:53,811 - INFO - Extracted 2728 characters from page 3
+2024-11-23 12:55:53,819 - INFO - Extracted 2998 characters from page 4
+2024-11-23 12:55:53,828 - INFO - Extracted 2876 characters from page 5
+2024-11-23 12:55:53,835 - INFO - Extracted 3122 characters from page 6
+2024-11-23 12:55:53,845 - INFO - Extracted 3090 characters from page 7
+2024-11-23 12:55:53,853 - INFO - Extracted 3298 characters from page 8
+2024-11-23 12:55:53,862 - INFO - Extracted 2708 characters from page 9
+2024-11-23 12:55:53,869 - INFO - Extracted 2398 characters from page 10
+2024-11-23 12:55:53,877 - INFO - Extracted 2853 characters from page 11
+2024-11-23 12:55:53,884 - INFO - Extracted 2469 characters from page 12
+2024-11-23 12:55:53,891 - INFO - Extracted 2400 characters from page 13
+2024-11-23 12:55:53,900 - INFO - Extracted 2869 characters from page 14
+2024-11-23 12:55:53,907 - INFO - Extracted 1641 characters from page 15
+2024-11-23 12:55:53,913 - INFO - Extracted 1398 characters from page 16
+2024-11-23 12:55:53,917 - INFO - Extracted 1589 characters from page 17
+2024-11-23 12:55:53,923 - INFO - Extracted 1656 characters from page 18
+2024-11-23 12:55:53,928 - INFO - Extracted 1214 characters from page 19
+2024-11-23 12:55:53,930 - INFO - Extracted 157 characters from page 20
+2024-11-23 12:55:53,932 - INFO - Extracted 308 characters from page 21
+2024-11-23 12:55:53,936 - INFO - Extracted 261 characters from page 22
+2024-11-23 12:55:53,941 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 12:55:54,510 - INFO - Starting contract analysis
+2024-11-23 12:55:54,541 - INFO - Split text into 3 chunks
+2024-11-23 12:55:54,542 - INFO - Created 3 chunks for analysis
+2024-11-23 12:55:54,544 - INFO - Analyzing chunk 1/3
+2024-11-23 12:56:08,716 - INFO - Completed analysis of chunk 1/3
+2024-11-23 12:56:08,717 - INFO - Analyzing chunk 2/3
+2024-11-23 12:56:24,071 - INFO - Completed analysis of chunk 2/3
+2024-11-23 12:56:24,072 - INFO - Analyzing chunk 3/3
+2024-11-23 12:56:39,782 - INFO - Completed analysis of chunk 3/3
+2024-11-23 12:56:39,784 - INFO - Completed contract analysis
+2024-11-23 12:56:39,830 - INFO - 127.0.0.1 - - [23/Nov/2024 12:56:39] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:01:00,082 - INFO - Starting contract analysis request
+2024-11-23 13:01:00,097 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:01:00,137 - INFO - PDF has 22 pages
+2024-11-23 13:01:00,150 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:01:00,160 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:01:00,167 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:01:00,176 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:01:00,184 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:01:00,192 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:01:00,201 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:01:00,210 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:01:00,217 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:01:00,225 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:01:00,233 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:01:00,242 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:01:00,249 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:01:00,256 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:01:00,265 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:01:00,270 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:01:00,278 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:01:00,283 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:01:00,287 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:01:00,290 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:01:00,293 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:01:00,296 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:01:00,298 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:01:00,300 - INFO - Starting contract analysis
+2024-11-23 13:01:00,325 - INFO - Split text into 3 chunks
+2024-11-23 13:01:00,326 - INFO - Created 3 chunks for analysis
+2024-11-23 13:01:00,329 - INFO - Analyzing chunk 1/3
+2024-11-23 13:01:14,975 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:01:14,976 - INFO - Analyzing chunk 2/3
+2024-11-23 13:01:30,459 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:01:30,460 - INFO - Analyzing chunk 3/3
+2024-11-23 13:01:45,732 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:01:45,733 - INFO - Completed contract analysis
+2024-11-23 13:01:45,741 - INFO - 127.0.0.1 - - [23/Nov/2024 13:01:45] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:05:03,711 - INFO - Starting contract analysis request
+2024-11-23 13:05:03,761 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:05:03,793 - INFO - PDF has 22 pages
+2024-11-23 13:05:03,805 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:05:03,812 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:05:03,822 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:05:03,829 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:05:03,836 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:05:03,844 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:05:03,854 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:05:03,861 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:05:03,870 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:05:03,876 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:05:03,883 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:05:03,891 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:05:03,896 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:05:03,905 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:05:03,913 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:05:03,918 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:05:03,923 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:05:03,929 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:05:03,934 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:05:03,937 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:05:03,939 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:05:03,942 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:05:03,944 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:05:03,945 - INFO - Starting contract analysis
+2024-11-23 13:05:03,973 - INFO - Split text into 3 chunks
+2024-11-23 13:05:03,973 - INFO - Created 3 chunks for analysis
+2024-11-23 13:05:04,010 - INFO - Analyzing chunk 1/3
+2024-11-23 13:05:18,928 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:05:18,929 - INFO - Analyzing chunk 2/3
+2024-11-23 13:05:34,909 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:05:34,910 - INFO - Analyzing chunk 3/3
+2024-11-23 13:05:51,175 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:05:51,177 - INFO - Completed contract analysis
+2024-11-23 13:05:51,185 - INFO - 127.0.0.1 - - [23/Nov/2024 13:05:51] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:17:07,988 - INFO - Starting contract analysis request
+2024-11-23 13:17:08,039 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:17:08,075 - INFO - PDF has 22 pages
+2024-11-23 13:17:08,090 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:17:08,101 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:17:08,109 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:17:08,120 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:17:08,129 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:17:08,138 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:17:08,147 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:17:08,154 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:17:08,164 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:17:08,171 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:17:08,179 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:17:08,187 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:17:08,193 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:17:08,203 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:17:08,209 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:17:08,217 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:17:08,222 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:17:08,227 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:17:08,235 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:17:08,237 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:17:08,240 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:17:08,241 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:17:08,243 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:17:08,245 - INFO - Starting contract analysis
+2024-11-23 13:17:08,270 - INFO - Split text into 3 chunks
+2024-11-23 13:17:08,271 - INFO - Created 3 chunks for analysis
+2024-11-23 13:17:08,273 - INFO - Analyzing chunk 1/3
+2024-11-23 13:17:23,315 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:17:23,316 - INFO - Analyzing chunk 2/3
+2024-11-23 13:17:38,777 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:17:38,779 - INFO - Analyzing chunk 3/3
+2024-11-23 13:17:53,800 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:17:53,801 - INFO - Completed contract analysis
+2024-11-23 13:17:53,812 - INFO - 127.0.0.1 - - [23/Nov/2024 13:17:53] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:28:50,374 - INFO - Starting contract analysis request
+2024-11-23 13:28:50,385 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:28:50,424 - INFO - PDF has 22 pages
+2024-11-23 13:28:50,447 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:28:50,460 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:28:50,473 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:28:50,483 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:28:50,497 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:28:50,507 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:28:50,518 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:28:50,526 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:28:50,538 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:28:50,548 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:28:50,556 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:28:50,565 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:28:50,571 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:28:50,579 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:28:50,588 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:28:50,592 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:28:50,599 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:28:50,604 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:28:50,609 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:28:50,613 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:28:50,615 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:28:50,618 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:28:50,620 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:28:50,622 - INFO - Starting contract analysis
+2024-11-23 13:28:50,650 - INFO - Split text into 3 chunks
+2024-11-23 13:28:50,651 - INFO - Created 3 chunks for analysis
+2024-11-23 13:28:50,652 - INFO - Analyzing chunk 1/3
+2024-11-23 13:29:05,182 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:29:05,183 - INFO - Analyzing chunk 2/3
+2024-11-23 13:29:20,952 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:29:20,953 - INFO - Analyzing chunk 3/3
+2024-11-23 13:29:36,314 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:29:36,315 - INFO - Completed contract analysis
+2024-11-23 13:29:36,322 - INFO - 127.0.0.1 - - [23/Nov/2024 13:29:36] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:30:27,973 - INFO - Starting contract analysis request
+2024-11-23 13:30:27,983 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:30:28,051 - INFO - PDF has 22 pages
+2024-11-23 13:30:28,072 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:30:28,087 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:30:28,098 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:30:28,109 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:30:28,119 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:30:28,133 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:30:28,145 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:30:28,157 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:30:28,165 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:30:28,173 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:30:28,180 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:30:28,188 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:30:28,195 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:30:28,202 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:30:28,210 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:30:28,216 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:30:28,223 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:30:28,227 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:30:28,232 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:30:28,234 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:30:28,239 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:30:28,242 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:30:28,245 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:30:28,246 - INFO - Starting contract analysis
+2024-11-23 13:30:28,273 - INFO - Split text into 3 chunks
+2024-11-23 13:30:28,274 - INFO - Created 3 chunks for analysis
+2024-11-23 13:30:28,275 - INFO - Analyzing chunk 1/3
+2024-11-23 13:30:42,571 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:30:42,573 - INFO - Analyzing chunk 2/3
+2024-11-23 13:30:58,132 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:30:58,133 - INFO - Analyzing chunk 3/3
+2024-11-23 13:31:13,288 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:31:13,289 - INFO - Completed contract analysis
+2024-11-23 13:31:13,294 - INFO - 127.0.0.1 - - [23/Nov/2024 13:31:13] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:48:05,943 - INFO - Starting contract analysis request
+2024-11-23 13:48:05,956 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 13:48:06,018 - INFO - PDF has 22 pages
+2024-11-23 13:48:06,041 - INFO - Extracted 2278 characters from page 1
+2024-11-23 13:48:06,049 - INFO - Extracted 2852 characters from page 2
+2024-11-23 13:48:06,061 - INFO - Extracted 2728 characters from page 3
+2024-11-23 13:48:06,072 - INFO - Extracted 2998 characters from page 4
+2024-11-23 13:48:06,079 - INFO - Extracted 2876 characters from page 5
+2024-11-23 13:48:06,090 - INFO - Extracted 3122 characters from page 6
+2024-11-23 13:48:06,098 - INFO - Extracted 3090 characters from page 7
+2024-11-23 13:48:06,110 - INFO - Extracted 3298 characters from page 8
+2024-11-23 13:48:06,120 - INFO - Extracted 2708 characters from page 9
+2024-11-23 13:48:06,126 - INFO - Extracted 2398 characters from page 10
+2024-11-23 13:48:06,141 - INFO - Extracted 2853 characters from page 11
+2024-11-23 13:48:06,153 - INFO - Extracted 2469 characters from page 12
+2024-11-23 13:48:06,160 - INFO - Extracted 2400 characters from page 13
+2024-11-23 13:48:06,173 - INFO - Extracted 2869 characters from page 14
+2024-11-23 13:48:06,181 - INFO - Extracted 1641 characters from page 15
+2024-11-23 13:48:06,188 - INFO - Extracted 1398 characters from page 16
+2024-11-23 13:48:06,196 - INFO - Extracted 1589 characters from page 17
+2024-11-23 13:48:06,202 - INFO - Extracted 1656 characters from page 18
+2024-11-23 13:48:06,208 - INFO - Extracted 1214 characters from page 19
+2024-11-23 13:48:06,211 - INFO - Extracted 157 characters from page 20
+2024-11-23 13:48:06,214 - INFO - Extracted 308 characters from page 21
+2024-11-23 13:48:06,218 - INFO - Extracted 261 characters from page 22
+2024-11-23 13:48:06,221 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 13:48:06,222 - INFO - Starting contract analysis
+2024-11-23 13:48:06,246 - INFO - Split text into 3 chunks
+2024-11-23 13:48:06,247 - INFO - Created 3 chunks for analysis
+2024-11-23 13:48:06,250 - INFO - Analyzing chunk 1/3
+2024-11-23 13:48:21,105 - INFO - Completed analysis of chunk 1/3
+2024-11-23 13:48:21,106 - INFO - Analyzing chunk 2/3
+2024-11-23 13:48:36,500 - INFO - Completed analysis of chunk 2/3
+2024-11-23 13:48:36,502 - INFO - Analyzing chunk 3/3
+2024-11-23 13:48:51,720 - INFO - Completed analysis of chunk 3/3
+2024-11-23 13:48:51,722 - INFO - Completed contract analysis
+2024-11-23 13:48:51,727 - INFO - 127.0.0.1 - - [23/Nov/2024 13:48:51] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 13:50:04,711 - INFO - Starting contract analysis request
+2024-11-23 13:50:04,729 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-23 13:50:04,776 - INFO - PDF has 9 pages
+2024-11-23 13:50:04,822 - INFO - Extracted 2288 characters from page 1
+2024-11-23 13:50:04,827 - INFO - Extracted 2730 characters from page 2
+2024-11-23 13:50:04,832 - INFO - Extracted 1768 characters from page 3
+2024-11-23 13:50:04,841 - INFO - Extracted 4353 characters from page 4
+2024-11-23 13:50:04,850 - INFO - Extracted 4182 characters from page 5
+2024-11-23 13:50:04,860 - INFO - Extracted 3619 characters from page 6
+2024-11-23 13:50:04,865 - INFO - Extracted 2161 characters from page 7
+2024-11-23 13:50:04,878 - INFO - Extracted 832 characters from page 8
+2024-11-23 13:50:04,885 - INFO - Extracted 465 characters from page 9
+2024-11-23 13:50:04,887 - INFO - Successfully extracted total of 22406 characters
+2024-11-23 13:50:04,890 - INFO - Starting contract analysis
+2024-11-23 13:50:04,913 - INFO - Split text into 2 chunks
+2024-11-23 13:50:04,914 - INFO - Created 2 chunks for analysis
+2024-11-23 13:50:04,915 - INFO - Analyzing chunk 1/2
+2024-11-23 13:50:19,633 - INFO - Completed analysis of chunk 1/2
+2024-11-23 13:50:19,636 - INFO - Analyzing chunk 2/2
+2024-11-23 13:50:34,365 - INFO - Completed analysis of chunk 2/2
+2024-11-23 13:50:34,367 - INFO - Completed contract analysis
+2024-11-23 13:50:34,373 - INFO - 127.0.0.1 - - [23/Nov/2024 13:50:34] "POST /analyze HTTP/1.1" 200 -
+2024-11-23 18:58:30,896 - INFO - Starting contract analysis request
+2024-11-23 18:58:30,910 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-23 18:58:30,926 - INFO - PDF has 22 pages
+2024-11-23 18:58:30,936 - INFO - Extracted 2278 characters from page 1
+2024-11-23 18:58:30,941 - INFO - Extracted 2852 characters from page 2
+2024-11-23 18:58:30,946 - INFO - Extracted 2728 characters from page 3
+2024-11-23 18:58:30,952 - INFO - Extracted 2998 characters from page 4
+2024-11-23 18:58:30,955 - INFO - Extracted 2876 characters from page 5
+2024-11-23 18:58:30,959 - INFO - Extracted 3122 characters from page 6
+2024-11-23 18:58:30,964 - INFO - Extracted 3090 characters from page 7
+2024-11-23 18:58:30,971 - INFO - Extracted 3298 characters from page 8
+2024-11-23 18:58:30,974 - INFO - Extracted 2708 characters from page 9
+2024-11-23 18:58:30,979 - INFO - Extracted 2398 characters from page 10
+2024-11-23 18:58:30,983 - INFO - Extracted 2853 characters from page 11
+2024-11-23 18:58:30,987 - INFO - Extracted 2469 characters from page 12
+2024-11-23 18:58:30,989 - INFO - Extracted 2400 characters from page 13
+2024-11-23 18:58:30,994 - INFO - Extracted 2869 characters from page 14
+2024-11-23 18:58:30,998 - INFO - Extracted 1641 characters from page 15
+2024-11-23 18:58:31,001 - INFO - Extracted 1398 characters from page 16
+2024-11-23 18:58:31,003 - INFO - Extracted 1589 characters from page 17
+2024-11-23 18:58:31,004 - INFO - Extracted 1656 characters from page 18
+2024-11-23 18:58:31,006 - INFO - Extracted 1214 characters from page 19
+2024-11-23 18:58:31,007 - INFO - Extracted 157 characters from page 20
+2024-11-23 18:58:31,008 - INFO - Extracted 308 characters from page 21
+2024-11-23 18:58:31,010 - INFO - Extracted 261 characters from page 22
+2024-11-23 18:58:31,012 - INFO - Successfully extracted total of 47184 characters
+2024-11-23 18:58:31,013 - INFO - Starting contract analysis
+2024-11-23 18:58:31,038 - INFO - Split text into 3 chunks
+2024-11-23 18:58:31,038 - INFO - Created 3 chunks for analysis
+2024-11-23 18:58:31,040 - INFO - Analyzing chunk 1/3
+2024-11-23 18:58:45,301 - INFO - Completed analysis of chunk 1/3
+2024-11-23 18:58:45,302 - INFO - Analyzing chunk 2/3
+2024-11-23 18:59:00,198 - INFO - Completed analysis of chunk 2/3
+2024-11-23 18:59:00,200 - INFO - Analyzing chunk 3/3
+2024-11-23 18:59:15,049 - INFO - Completed analysis of chunk 3/3
+2024-11-23 18:59:15,050 - INFO - Completed contract analysis
+2024-11-23 18:59:15,066 - INFO - 127.0.0.1 - - [23/Nov/2024 18:59:15] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 08:13:11,167 - INFO - Starting contract analysis request
+2024-11-25 08:13:11,198 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-25 08:13:11,274 - INFO - PDF has 9 pages
+2024-11-25 08:13:11,308 - INFO - Extracted 2288 characters from page 1
+2024-11-25 08:13:11,316 - INFO - Extracted 2730 characters from page 2
+2024-11-25 08:13:11,324 - INFO - Extracted 1768 characters from page 3
+2024-11-25 08:13:11,333 - INFO - Extracted 4353 characters from page 4
+2024-11-25 08:13:11,341 - INFO - Extracted 4182 characters from page 5
+2024-11-25 08:13:11,350 - INFO - Extracted 3619 characters from page 6
+2024-11-25 08:13:11,355 - INFO - Extracted 2161 characters from page 7
+2024-11-25 08:13:11,368 - INFO - Extracted 832 characters from page 8
+2024-11-25 08:13:11,374 - INFO - Extracted 465 characters from page 9
+2024-11-25 08:13:11,377 - INFO - Successfully extracted total of 22406 characters
+2024-11-25 08:13:11,380 - INFO - Starting contract analysis
+2024-11-25 08:13:11,452 - INFO - Split text into 2 chunks
+2024-11-25 08:13:11,453 - INFO - Created 2 chunks for analysis
+2024-11-25 08:13:11,455 - INFO - Analyzing chunk 1/2
+2024-11-25 08:13:26,799 - INFO - Completed analysis of chunk 1/2
+2024-11-25 08:13:26,800 - INFO - Analyzing chunk 2/2
+2024-11-25 08:13:41,518 - INFO - Completed analysis of chunk 2/2
+2024-11-25 08:13:41,520 - INFO - Completed contract analysis
+2024-11-25 08:13:41,555 - INFO - 127.0.0.1 - - [25/Nov/2024 08:13:41] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:16:23,075 - INFO - Starting contract analysis request
+2024-11-25 09:16:23,116 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:16:23,181 - INFO - PDF has 22 pages
+2024-11-25 09:16:23,210 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:16:23,219 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:16:23,230 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:16:23,241 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:16:23,253 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:16:23,265 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:16:23,277 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:16:23,287 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:16:23,297 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:16:23,306 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:16:23,313 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:16:23,321 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:16:23,329 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:16:23,337 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:16:23,347 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:16:23,355 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:16:23,361 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:16:23,365 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:16:23,375 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:16:23,377 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:16:23,380 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:16:23,383 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:16:23,385 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:16:23,389 - INFO - Starting contract analysis
+2024-11-25 09:16:23,484 - INFO - Split text into 3 chunks
+2024-11-25 09:16:23,484 - INFO - Created 3 chunks for analysis
+2024-11-25 09:16:23,518 - INFO - Analyzing chunk 1/3
+2024-11-25 09:16:38,596 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:16:38,597 - INFO - Analyzing chunk 2/3
+2024-11-25 09:16:54,590 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:16:54,592 - INFO - Analyzing chunk 3/3
+2024-11-25 09:17:10,359 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:17:10,360 - INFO - Completed contract analysis
+2024-11-25 09:17:10,402 - INFO - 127.0.0.1 - - [25/Nov/2024 09:17:10] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:25:24,328 - INFO - Starting contract analysis request
+2024-11-25 09:25:24,339 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:25:24,372 - INFO - PDF has 22 pages
+2024-11-25 09:25:24,385 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:25:24,395 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:25:24,403 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:25:24,412 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:25:24,422 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:25:24,429 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:25:24,439 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:25:24,448 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:25:24,458 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:25:24,464 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:25:24,476 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:25:24,482 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:25:24,491 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:25:24,500 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:25:24,510 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:25:24,514 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:25:24,521 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:25:24,528 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:25:24,535 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:25:24,539 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:25:24,542 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:25:24,545 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:25:24,546 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:25:24,549 - INFO - Starting contract analysis
+2024-11-25 09:25:24,582 - INFO - Split text into 3 chunks
+2024-11-25 09:25:24,583 - INFO - Created 3 chunks for analysis
+2024-11-25 09:25:24,586 - INFO - Analyzing chunk 1/3
+2024-11-25 09:25:39,831 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:25:39,832 - INFO - Analyzing chunk 2/3
+2024-11-25 09:25:56,254 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:25:56,256 - INFO - Analyzing chunk 3/3
+2024-11-25 09:26:12,130 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:26:12,132 - INFO - Completed contract analysis
+2024-11-25 09:26:12,139 - INFO - 127.0.0.1 - - [25/Nov/2024 09:26:12] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:28:51,173 - INFO - Starting contract analysis request
+2024-11-25 09:28:51,183 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:28:51,223 - INFO - PDF has 22 pages
+2024-11-25 09:28:51,240 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:28:51,256 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:28:51,268 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:28:51,275 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:28:51,283 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:28:51,292 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:28:51,301 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:28:51,310 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:28:51,317 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:28:51,326 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:28:51,333 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:28:51,341 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:28:51,347 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:28:51,355 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:28:51,362 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:28:51,368 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:28:51,373 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:28:51,377 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:28:51,384 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:28:51,387 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:28:51,389 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:28:51,391 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:28:51,394 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:28:51,395 - INFO - Starting contract analysis
+2024-11-25 09:28:51,425 - INFO - Split text into 3 chunks
+2024-11-25 09:28:51,426 - INFO - Created 3 chunks for analysis
+2024-11-25 09:28:51,427 - INFO - Analyzing chunk 1/3
+2024-11-25 09:29:06,245 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:29:06,246 - INFO - Analyzing chunk 2/3
+2024-11-25 09:29:22,260 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:29:22,261 - INFO - Analyzing chunk 3/3
+2024-11-25 09:29:37,737 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:29:37,739 - INFO - Completed contract analysis
+2024-11-25 09:29:37,746 - INFO - 127.0.0.1 - - [25/Nov/2024 09:29:37] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:36:50,541 - INFO - Starting contract analysis request
+2024-11-25 09:36:50,557 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:36:50,594 - INFO - PDF has 22 pages
+2024-11-25 09:36:50,612 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:36:50,623 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:36:50,634 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:36:50,647 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:36:50,660 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:36:50,674 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:36:50,689 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:36:50,700 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:36:50,709 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:36:50,717 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:36:50,740 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:36:50,750 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:36:50,761 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:36:50,771 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:36:50,786 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:36:50,805 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:36:50,815 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:36:50,847 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:36:50,871 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:36:50,875 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:36:50,876 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:36:50,879 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:36:50,883 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:36:50,884 - INFO - Starting contract analysis
+2024-11-25 09:36:50,927 - INFO - Split text into 3 chunks
+2024-11-25 09:36:50,928 - INFO - Created 3 chunks for analysis
+2024-11-25 09:36:50,931 - INFO - Analyzing chunk 1/3
+2024-11-25 09:37:05,980 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:37:05,980 - INFO - Analyzing chunk 2/3
+2024-11-25 09:37:21,807 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:37:21,808 - INFO - Analyzing chunk 3/3
+2024-11-25 09:37:37,907 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:37:37,909 - INFO - Completed contract analysis
+2024-11-25 09:37:37,914 - INFO - 127.0.0.1 - - [25/Nov/2024 09:37:37] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:40:05,780 - INFO - Starting contract analysis request
+2024-11-25 09:40:05,798 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:40:05,841 - INFO - PDF has 22 pages
+2024-11-25 09:40:05,856 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:40:05,865 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:40:05,874 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:40:05,884 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:40:05,892 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:40:05,901 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:40:05,909 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:40:05,918 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:40:05,928 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:40:05,934 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:40:05,943 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:40:05,951 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:40:05,959 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:40:05,969 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:40:05,978 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:40:05,984 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:40:05,993 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:40:06,000 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:40:06,009 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:40:06,012 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:40:06,015 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:40:06,023 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:40:06,026 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:40:06,046 - INFO - Starting contract analysis
+2024-11-25 09:40:06,076 - INFO - Split text into 3 chunks
+2024-11-25 09:40:06,077 - INFO - Created 3 chunks for analysis
+2024-11-25 09:40:06,079 - INFO - Analyzing chunk 1/3
+2024-11-25 09:40:21,027 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:40:21,029 - INFO - Analyzing chunk 2/3
+2024-11-25 09:40:37,643 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:40:37,645 - INFO - Analyzing chunk 3/3
+2024-11-25 09:40:53,004 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:40:53,006 - INFO - Completed contract analysis
+2024-11-25 09:40:53,048 - INFO - 127.0.0.1 - - [25/Nov/2024 09:40:53] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:43:01,911 - INFO - Starting contract analysis request
+2024-11-25 09:43:01,922 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 09:43:01,954 - INFO - PDF has 22 pages
+2024-11-25 09:43:01,973 - INFO - Extracted 2278 characters from page 1
+2024-11-25 09:43:01,980 - INFO - Extracted 2852 characters from page 2
+2024-11-25 09:43:01,990 - INFO - Extracted 2728 characters from page 3
+2024-11-25 09:43:01,999 - INFO - Extracted 2998 characters from page 4
+2024-11-25 09:43:02,011 - INFO - Extracted 2876 characters from page 5
+2024-11-25 09:43:02,028 - INFO - Extracted 3122 characters from page 6
+2024-11-25 09:43:02,043 - INFO - Extracted 3090 characters from page 7
+2024-11-25 09:43:02,051 - INFO - Extracted 3298 characters from page 8
+2024-11-25 09:43:02,061 - INFO - Extracted 2708 characters from page 9
+2024-11-25 09:43:02,068 - INFO - Extracted 2398 characters from page 10
+2024-11-25 09:43:02,078 - INFO - Extracted 2853 characters from page 11
+2024-11-25 09:43:02,086 - INFO - Extracted 2469 characters from page 12
+2024-11-25 09:43:02,094 - INFO - Extracted 2400 characters from page 13
+2024-11-25 09:43:02,103 - INFO - Extracted 2869 characters from page 14
+2024-11-25 09:43:02,111 - INFO - Extracted 1641 characters from page 15
+2024-11-25 09:43:02,116 - INFO - Extracted 1398 characters from page 16
+2024-11-25 09:43:02,121 - INFO - Extracted 1589 characters from page 17
+2024-11-25 09:43:02,125 - INFO - Extracted 1656 characters from page 18
+2024-11-25 09:43:02,131 - INFO - Extracted 1214 characters from page 19
+2024-11-25 09:43:02,134 - INFO - Extracted 157 characters from page 20
+2024-11-25 09:43:02,137 - INFO - Extracted 308 characters from page 21
+2024-11-25 09:43:02,140 - INFO - Extracted 261 characters from page 22
+2024-11-25 09:43:02,142 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 09:43:02,143 - INFO - Starting contract analysis
+2024-11-25 09:43:02,168 - INFO - Split text into 3 chunks
+2024-11-25 09:43:02,169 - INFO - Created 3 chunks for analysis
+2024-11-25 09:43:02,173 - INFO - Analyzing chunk 1/3
+2024-11-25 09:43:17,571 - INFO - Completed analysis of chunk 1/3
+2024-11-25 09:43:17,573 - INFO - Analyzing chunk 2/3
+2024-11-25 09:43:33,973 - INFO - Completed analysis of chunk 2/3
+2024-11-25 09:43:33,974 - INFO - Analyzing chunk 3/3
+2024-11-25 09:43:49,518 - INFO - Completed analysis of chunk 3/3
+2024-11-25 09:43:49,519 - INFO - Completed contract analysis
+2024-11-25 09:43:49,526 - INFO - 127.0.0.1 - - [25/Nov/2024 09:43:49] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:46:42,303 - INFO - Starting contract analysis request
+2024-11-25 09:46:42,321 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-25 09:46:42,366 - INFO - PDF has 9 pages
+2024-11-25 09:46:42,389 - INFO - Extracted 2288 characters from page 1
+2024-11-25 09:46:42,393 - INFO - Extracted 2730 characters from page 2
+2024-11-25 09:46:42,397 - INFO - Extracted 1768 characters from page 3
+2024-11-25 09:46:42,409 - INFO - Extracted 4353 characters from page 4
+2024-11-25 09:46:42,417 - INFO - Extracted 4182 characters from page 5
+2024-11-25 09:46:42,426 - INFO - Extracted 3619 characters from page 6
+2024-11-25 09:46:42,434 - INFO - Extracted 2161 characters from page 7
+2024-11-25 09:46:42,445 - INFO - Extracted 832 characters from page 8
+2024-11-25 09:46:42,453 - INFO - Extracted 465 characters from page 9
+2024-11-25 09:46:42,454 - INFO - Successfully extracted total of 22406 characters
+2024-11-25 09:46:42,455 - INFO - Starting contract analysis
+2024-11-25 09:46:42,474 - INFO - Split text into 2 chunks
+2024-11-25 09:46:42,475 - INFO - Created 2 chunks for analysis
+2024-11-25 09:46:42,476 - INFO - Analyzing chunk 1/2
+2024-11-25 09:46:57,904 - INFO - Completed analysis of chunk 1/2
+2024-11-25 09:46:57,905 - INFO - Analyzing chunk 2/2
+2024-11-25 09:47:12,904 - INFO - Completed analysis of chunk 2/2
+2024-11-25 09:47:12,905 - INFO - Completed contract analysis
+2024-11-25 09:47:12,912 - INFO - 127.0.0.1 - - [25/Nov/2024 09:47:12] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:47:52,866 - INFO - Starting contract analysis request
+2024-11-25 09:47:52,913 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-25 09:47:52,947 - INFO - PDF has 9 pages
+2024-11-25 09:47:52,961 - INFO - Extracted 2288 characters from page 1
+2024-11-25 09:47:52,968 - INFO - Extracted 2730 characters from page 2
+2024-11-25 09:47:52,973 - INFO - Extracted 1768 characters from page 3
+2024-11-25 09:47:52,980 - INFO - Extracted 4353 characters from page 4
+2024-11-25 09:47:52,988 - INFO - Extracted 4182 characters from page 5
+2024-11-25 09:47:52,999 - INFO - Extracted 3619 characters from page 6
+2024-11-25 09:47:53,006 - INFO - Extracted 2161 characters from page 7
+2024-11-25 09:47:53,027 - INFO - Extracted 832 characters from page 8
+2024-11-25 09:47:53,040 - INFO - Extracted 465 characters from page 9
+2024-11-25 09:47:53,044 - INFO - Successfully extracted total of 22406 characters
+2024-11-25 09:47:53,046 - INFO - Starting contract analysis
+2024-11-25 09:47:53,079 - INFO - Split text into 2 chunks
+2024-11-25 09:47:53,130 - INFO - Created 2 chunks for analysis
+2024-11-25 09:47:53,134 - INFO - Analyzing chunk 1/2
+2024-11-25 09:48:08,693 - INFO - Completed analysis of chunk 1/2
+2024-11-25 09:48:08,695 - INFO - Analyzing chunk 2/2
+2024-11-25 09:48:23,866 - INFO - Completed analysis of chunk 2/2
+2024-11-25 09:48:23,868 - INFO - Completed contract analysis
+2024-11-25 09:48:23,874 - INFO - 127.0.0.1 - - [25/Nov/2024 09:48:23] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 09:56:03,929 - INFO - Starting contract analysis request
+2024-11-25 09:56:03,984 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-25 09:56:04,027 - INFO - PDF has 9 pages
+2024-11-25 09:56:04,045 - INFO - Extracted 2288 characters from page 1
+2024-11-25 09:56:04,050 - INFO - Extracted 2730 characters from page 2
+2024-11-25 09:56:04,053 - INFO - Extracted 1768 characters from page 3
+2024-11-25 09:56:04,061 - INFO - Extracted 4353 characters from page 4
+2024-11-25 09:56:04,068 - INFO - Extracted 4182 characters from page 5
+2024-11-25 09:56:04,076 - INFO - Extracted 3619 characters from page 6
+2024-11-25 09:56:04,084 - INFO - Extracted 2161 characters from page 7
+2024-11-25 09:56:04,093 - INFO - Extracted 832 characters from page 8
+2024-11-25 09:56:04,098 - INFO - Extracted 465 characters from page 9
+2024-11-25 09:56:04,100 - INFO - Successfully extracted total of 22406 characters
+2024-11-25 09:56:04,101 - INFO - Starting contract analysis
+2024-11-25 09:56:04,116 - INFO - Split text into 2 chunks
+2024-11-25 09:56:04,117 - INFO - Created 2 chunks for analysis
+2024-11-25 09:56:04,120 - INFO - Analyzing chunk 1/2
+2024-11-25 09:56:20,339 - INFO - Completed analysis of chunk 1/2
+2024-11-25 09:56:20,341 - INFO - Analyzing chunk 2/2
+2024-11-25 09:56:35,561 - INFO - Completed analysis of chunk 2/2
+2024-11-25 09:56:35,562 - INFO - Completed contract analysis
+2024-11-25 09:56:35,569 - INFO - 127.0.0.1 - - [25/Nov/2024 09:56:35] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 14:28:41,810 - INFO - Starting contract analysis request
+2024-11-25 14:28:41,862 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 14:28:41,941 - INFO - PDF has 22 pages
+2024-11-25 14:28:41,978 - INFO - Extracted 2278 characters from page 1
+2024-11-25 14:28:41,987 - INFO - Extracted 2852 characters from page 2
+2024-11-25 14:28:41,998 - INFO - Extracted 2728 characters from page 3
+2024-11-25 14:28:42,009 - INFO - Extracted 2998 characters from page 4
+2024-11-25 14:28:42,018 - INFO - Extracted 2876 characters from page 5
+2024-11-25 14:28:42,030 - INFO - Extracted 3122 characters from page 6
+2024-11-25 14:28:42,039 - INFO - Extracted 3090 characters from page 7
+2024-11-25 14:28:42,048 - INFO - Extracted 3298 characters from page 8
+2024-11-25 14:28:42,056 - INFO - Extracted 2708 characters from page 9
+2024-11-25 14:28:42,066 - INFO - Extracted 2398 characters from page 10
+2024-11-25 14:28:42,074 - INFO - Extracted 2853 characters from page 11
+2024-11-25 14:28:42,081 - INFO - Extracted 2469 characters from page 12
+2024-11-25 14:28:42,089 - INFO - Extracted 2400 characters from page 13
+2024-11-25 14:28:42,099 - INFO - Extracted 2869 characters from page 14
+2024-11-25 14:28:42,108 - INFO - Extracted 1641 characters from page 15
+2024-11-25 14:28:42,115 - INFO - Extracted 1398 characters from page 16
+2024-11-25 14:28:42,120 - INFO - Extracted 1589 characters from page 17
+2024-11-25 14:28:42,127 - INFO - Extracted 1656 characters from page 18
+2024-11-25 14:28:42,133 - INFO - Extracted 1214 characters from page 19
+2024-11-25 14:28:42,135 - INFO - Extracted 157 characters from page 20
+2024-11-25 14:28:42,139 - INFO - Extracted 308 characters from page 21
+2024-11-25 14:28:42,143 - INFO - Extracted 261 characters from page 22
+2024-11-25 14:28:42,147 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 14:28:42,150 - INFO - Starting contract analysis
+2024-11-25 14:28:42,245 - INFO - Split text into 3 chunks
+2024-11-25 14:28:42,246 - INFO - Created 3 chunks for analysis
+2024-11-25 14:28:42,250 - INFO - Analyzing chunk 1/3
+2024-11-25 14:28:57,102 - INFO - Completed analysis of chunk 1/3
+2024-11-25 14:28:57,104 - INFO - Analyzing chunk 2/3
+2024-11-25 14:29:13,493 - INFO - Completed analysis of chunk 2/3
+2024-11-25 14:29:13,495 - INFO - Analyzing chunk 3/3
+2024-11-25 14:29:29,256 - INFO - Completed analysis of chunk 3/3
+2024-11-25 14:29:29,258 - INFO - Completed contract analysis
+2024-11-25 14:29:29,269 - INFO - 127.0.0.1 - - [25/Nov/2024 14:29:29] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 14:30:30,166 - INFO - 127.0.0.1 - - [25/Nov/2024 14:30:30] "[33mOPTIONS /riskassess HTTP/1.1[0m" 404 -
+2024-11-25 14:53:31,558 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\contract_chat.py', reloading
+2024-11-25 14:53:32,437 - INFO -  * Restarting with stat
+2024-11-25 14:53:35,450 - INFO - Starting Flask server...
+2024-11-25 14:53:35,493 - WARNING -  * Debugger is active!
+2024-11-25 14:53:35,526 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 14:54:12,058 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\contract_analyzer.py', reloading
+2024-11-25 14:54:12,254 - INFO -  * Restarting with stat
+2024-11-25 14:54:14,015 - INFO - Starting Flask server...
+2024-11-25 14:54:14,053 - WARNING -  * Debugger is active!
+2024-11-25 14:54:14,077 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 14:54:39,202 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\app.py', reloading
+2024-11-25 14:54:39,443 - INFO -  * Restarting with stat
+2024-11-25 14:54:41,217 - INFO - Starting Flask server...
+2024-11-25 14:54:41,248 - WARNING -  * Debugger is active!
+2024-11-25 14:54:41,267 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 14:55:52,941 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\contract_chat.py', reloading
+2024-11-25 14:55:53,228 - INFO -  * Restarting with stat
+2024-11-25 15:10:33,019 - INFO - Starting Flask server...
+2024-11-25 15:10:33,096 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-25 15:10:33,098 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 15:10:33,104 - INFO -  * Restarting with stat
+2024-11-25 15:10:37,797 - INFO - Starting Flask server...
+2024-11-25 15:10:37,848 - WARNING -  * Debugger is active!
+2024-11-25 15:10:37,867 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 15:11:01,618 - INFO - 127.0.0.1 - - [25/Nov/2024 15:11:01] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-25 15:11:01,917 - INFO - 127.0.0.1 - - [25/Nov/2024 15:11:01] "[33mPOST /contractIQ HTTP/1.1[0m" 404 -
+2024-11-25 15:12:49,973 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\app.py', reloading
+2024-11-25 15:12:50,320 - INFO -  * Restarting with stat
+2024-11-25 15:12:54,854 - INFO - Starting Flask server...
+2024-11-25 15:12:54,884 - WARNING -  * Debugger is active!
+2024-11-25 15:12:54,897 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 15:13:06,325 - INFO - 127.0.0.1 - - [25/Nov/2024 15:13:06] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-25 15:13:06,585 - INFO - Received request data: {'message': 'can they deduct refunds from my check?', 'contractId': 'deel-Hilary_Wagner-contract-38epgwj_1.pdf', 'chatHistory': []}
+2024-11-25 15:13:06,586 - INFO - Looking for contract at: responses\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:13:06,587 - ERROR - Contract not found at: responses\deel-Hilary_Wagner-contract-38epgwj_1.pdf or responses\deel-Hilary_Wagner-contract-38epgwj_1.pdf.json
+2024-11-25 15:13:06,589 - INFO - 127.0.0.1 - - [25/Nov/2024 15:13:06] "[33mPOST /contractIQ HTTP/1.1[0m" 404 -
+2024-11-25 15:14:22,029 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\app.py', reloading
+2024-11-25 15:14:22,444 - INFO -  * Restarting with stat
+2024-11-25 15:14:26,769 - INFO - Starting Flask server...
+2024-11-25 15:14:26,801 - WARNING -  * Debugger is active!
+2024-11-25 15:14:26,818 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 15:14:36,325 - INFO - Starting contract analysis request
+2024-11-25 15:14:36,340 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:14:36,397 - INFO - PDF has 22 pages
+2024-11-25 15:14:36,428 - INFO - Extracted 2278 characters from page 1
+2024-11-25 15:14:36,437 - INFO - Extracted 2852 characters from page 2
+2024-11-25 15:14:36,447 - INFO - Extracted 2728 characters from page 3
+2024-11-25 15:14:36,456 - INFO - Extracted 2998 characters from page 4
+2024-11-25 15:14:36,464 - INFO - Extracted 2876 characters from page 5
+2024-11-25 15:14:36,478 - INFO - Extracted 3122 characters from page 6
+2024-11-25 15:14:36,487 - INFO - Extracted 3090 characters from page 7
+2024-11-25 15:14:36,495 - INFO - Extracted 3298 characters from page 8
+2024-11-25 15:14:36,502 - INFO - Extracted 2708 characters from page 9
+2024-11-25 15:14:36,510 - INFO - Extracted 2398 characters from page 10
+2024-11-25 15:14:36,521 - INFO - Extracted 2853 characters from page 11
+2024-11-25 15:14:36,532 - INFO - Extracted 2469 characters from page 12
+2024-11-25 15:14:36,539 - INFO - Extracted 2400 characters from page 13
+2024-11-25 15:14:36,548 - INFO - Extracted 2869 characters from page 14
+2024-11-25 15:14:36,559 - INFO - Extracted 1641 characters from page 15
+2024-11-25 15:14:36,566 - INFO - Extracted 1398 characters from page 16
+2024-11-25 15:14:36,572 - INFO - Extracted 1589 characters from page 17
+2024-11-25 15:14:36,577 - INFO - Extracted 1656 characters from page 18
+2024-11-25 15:14:36,583 - INFO - Extracted 1214 characters from page 19
+2024-11-25 15:14:36,586 - INFO - Extracted 157 characters from page 20
+2024-11-25 15:14:36,589 - INFO - Extracted 308 characters from page 21
+2024-11-25 15:14:36,593 - INFO - Extracted 261 characters from page 22
+2024-11-25 15:14:36,597 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 15:14:37,241 - INFO - Starting contract analysis
+2024-11-25 15:14:37,278 - INFO - Split text into 3 chunks
+2024-11-25 15:14:37,279 - INFO - Created 3 chunks for analysis
+2024-11-25 15:14:37,281 - INFO - Analyzing chunk 1/3
+2024-11-25 15:14:52,850 - INFO - Completed analysis of chunk 1/3
+2024-11-25 15:14:52,851 - INFO - Analyzing chunk 2/3
+2024-11-25 15:15:08,818 - INFO - Completed analysis of chunk 2/3
+2024-11-25 15:15:08,820 - INFO - Analyzing chunk 3/3
+2024-11-25 15:15:24,588 - INFO - Completed analysis of chunk 3/3
+2024-11-25 15:15:24,590 - INFO - Completed contract analysis
+2024-11-25 15:15:24,633 - INFO - 127.0.0.1 - - [25/Nov/2024 15:15:24] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 15:15:36,646 - INFO - 127.0.0.1 - - [25/Nov/2024 15:15:36] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-25 15:15:36,908 - INFO - Looking for contract at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:15:36,910 - ERROR - Contract not found at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:15:36,911 - INFO - 127.0.0.1 - - [25/Nov/2024 15:15:36] "[33mPOST /contractIQ HTTP/1.1[0m" 404 -
+2024-11-25 15:21:36,883 - INFO - Starting contract analysis request
+2024-11-25 15:21:36,934 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:21:36,985 - INFO - PDF has 22 pages
+2024-11-25 15:21:37,005 - INFO - Extracted 2278 characters from page 1
+2024-11-25 15:21:37,021 - INFO - Extracted 2852 characters from page 2
+2024-11-25 15:21:37,033 - INFO - Extracted 2728 characters from page 3
+2024-11-25 15:21:37,057 - INFO - Extracted 2998 characters from page 4
+2024-11-25 15:21:37,102 - INFO - Extracted 2876 characters from page 5
+2024-11-25 15:21:37,113 - INFO - Extracted 3122 characters from page 6
+2024-11-25 15:21:37,155 - INFO - Extracted 3090 characters from page 7
+2024-11-25 15:21:37,167 - INFO - Extracted 3298 characters from page 8
+2024-11-25 15:21:37,179 - INFO - Extracted 2708 characters from page 9
+2024-11-25 15:21:37,191 - INFO - Extracted 2398 characters from page 10
+2024-11-25 15:21:37,206 - INFO - Extracted 2853 characters from page 11
+2024-11-25 15:21:37,216 - INFO - Extracted 2469 characters from page 12
+2024-11-25 15:21:37,226 - INFO - Extracted 2400 characters from page 13
+2024-11-25 15:21:37,237 - INFO - Extracted 2869 characters from page 14
+2024-11-25 15:21:37,244 - INFO - Extracted 1641 characters from page 15
+2024-11-25 15:21:37,252 - INFO - Extracted 1398 characters from page 16
+2024-11-25 15:21:37,256 - INFO - Extracted 1589 characters from page 17
+2024-11-25 15:21:37,261 - INFO - Extracted 1656 characters from page 18
+2024-11-25 15:21:37,271 - INFO - Extracted 1214 characters from page 19
+2024-11-25 15:21:37,274 - INFO - Extracted 157 characters from page 20
+2024-11-25 15:21:37,277 - INFO - Extracted 308 characters from page 21
+2024-11-25 15:21:37,282 - INFO - Extracted 261 characters from page 22
+2024-11-25 15:21:37,287 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 15:21:37,289 - INFO - Starting contract analysis
+2024-11-25 15:21:37,325 - INFO - Split text into 3 chunks
+2024-11-25 15:21:37,326 - INFO - Created 3 chunks for analysis
+2024-11-25 15:21:37,328 - INFO - Analyzing chunk 1/3
+2024-11-25 15:21:52,796 - INFO - Completed analysis of chunk 1/3
+2024-11-25 15:21:52,798 - INFO - Analyzing chunk 2/3
+2024-11-25 15:22:09,077 - INFO - Completed analysis of chunk 2/3
+2024-11-25 15:22:09,079 - INFO - Analyzing chunk 3/3
+2024-11-25 15:22:25,257 - INFO - Completed analysis of chunk 3/3
+2024-11-25 15:22:25,260 - INFO - Completed contract analysis
+2024-11-25 15:22:25,266 - INFO - 127.0.0.1 - - [25/Nov/2024 15:22:25] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 15:22:34,976 - INFO - 127.0.0.1 - - [25/Nov/2024 15:22:34] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-25 15:22:35,292 - INFO - Looking for contract at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:22:35,294 - ERROR - Contract not found at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:22:35,295 - INFO - 127.0.0.1 - - [25/Nov/2024 15:22:35] "[33mPOST /contractIQ HTTP/1.1[0m" 404 -
+2024-11-25 15:23:37,060 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\app.py', reloading
+2024-11-25 15:23:37,477 - INFO -  * Restarting with stat
+2024-11-25 15:23:42,245 - INFO - Starting Flask server...
+2024-11-25 15:23:42,276 - WARNING -  * Debugger is active!
+2024-11-25 15:23:42,292 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 15:23:51,615 - INFO - Starting contract analysis request
+2024-11-25 15:23:51,624 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:23:51,660 - INFO - PDF has 22 pages
+2024-11-25 15:23:51,674 - INFO - Extracted 2278 characters from page 1
+2024-11-25 15:23:51,683 - INFO - Extracted 2852 characters from page 2
+2024-11-25 15:23:51,692 - INFO - Extracted 2728 characters from page 3
+2024-11-25 15:23:51,700 - INFO - Extracted 2998 characters from page 4
+2024-11-25 15:23:51,708 - INFO - Extracted 2876 characters from page 5
+2024-11-25 15:23:51,716 - INFO - Extracted 3122 characters from page 6
+2024-11-25 15:23:51,727 - INFO - Extracted 3090 characters from page 7
+2024-11-25 15:23:51,735 - INFO - Extracted 3298 characters from page 8
+2024-11-25 15:23:51,744 - INFO - Extracted 2708 characters from page 9
+2024-11-25 15:23:51,752 - INFO - Extracted 2398 characters from page 10
+2024-11-25 15:23:51,760 - INFO - Extracted 2853 characters from page 11
+2024-11-25 15:23:51,766 - INFO - Extracted 2469 characters from page 12
+2024-11-25 15:23:51,775 - INFO - Extracted 2400 characters from page 13
+2024-11-25 15:23:51,781 - INFO - Extracted 2869 characters from page 14
+2024-11-25 15:23:51,790 - INFO - Extracted 1641 characters from page 15
+2024-11-25 15:23:51,795 - INFO - Extracted 1398 characters from page 16
+2024-11-25 15:23:51,800 - INFO - Extracted 1589 characters from page 17
+2024-11-25 15:23:51,805 - INFO - Extracted 1656 characters from page 18
+2024-11-25 15:23:51,811 - INFO - Extracted 1214 characters from page 19
+2024-11-25 15:23:51,813 - INFO - Extracted 157 characters from page 20
+2024-11-25 15:23:51,816 - INFO - Extracted 308 characters from page 21
+2024-11-25 15:23:51,819 - INFO - Extracted 261 characters from page 22
+2024-11-25 15:23:51,823 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 15:23:52,369 - INFO - Starting contract analysis
+2024-11-25 15:23:52,408 - INFO - Split text into 3 chunks
+2024-11-25 15:23:52,410 - INFO - Created 3 chunks for analysis
+2024-11-25 15:23:52,411 - INFO - Analyzing chunk 1/3
+2024-11-25 15:24:08,173 - INFO - Completed analysis of chunk 1/3
+2024-11-25 15:24:08,174 - INFO - Analyzing chunk 2/3
+2024-11-25 15:24:24,556 - INFO - Completed analysis of chunk 2/3
+2024-11-25 15:24:24,558 - INFO - Analyzing chunk 3/3
+2024-11-25 15:24:41,249 - INFO - Completed analysis of chunk 3/3
+2024-11-25 15:24:41,250 - INFO - Completed contract analysis
+2024-11-25 15:24:41,255 - INFO - 127.0.0.1 - - [25/Nov/2024 15:24:41] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 15:25:49,671 - INFO - 127.0.0.1 - - [25/Nov/2024 15:25:49] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-25 15:25:49,935 - INFO - Looking for contract at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:25:49,936 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:25:49,939 - INFO - PDF has 22 pages
+2024-11-25 15:25:49,952 - INFO - Extracted 2278 characters from page 1
+2024-11-25 15:25:49,961 - INFO - Extracted 2852 characters from page 2
+2024-11-25 15:25:49,969 - INFO - Extracted 2728 characters from page 3
+2024-11-25 15:25:49,979 - INFO - Extracted 2998 characters from page 4
+2024-11-25 15:25:49,987 - INFO - Extracted 2876 characters from page 5
+2024-11-25 15:25:49,998 - INFO - Extracted 3122 characters from page 6
+2024-11-25 15:25:50,008 - INFO - Extracted 3090 characters from page 7
+2024-11-25 15:25:50,019 - INFO - Extracted 3298 characters from page 8
+2024-11-25 15:25:50,029 - INFO - Extracted 2708 characters from page 9
+2024-11-25 15:25:50,037 - INFO - Extracted 2398 characters from page 10
+2024-11-25 15:25:50,046 - INFO - Extracted 2853 characters from page 11
+2024-11-25 15:25:50,053 - INFO - Extracted 2469 characters from page 12
+2024-11-25 15:25:50,064 - INFO - Extracted 2400 characters from page 13
+2024-11-25 15:25:50,073 - INFO - Extracted 2869 characters from page 14
+2024-11-25 15:25:50,082 - INFO - Extracted 1641 characters from page 15
+2024-11-25 15:25:50,088 - INFO - Extracted 1398 characters from page 16
+2024-11-25 15:25:50,096 - INFO - Extracted 1589 characters from page 17
+2024-11-25 15:25:50,102 - INFO - Extracted 1656 characters from page 18
+2024-11-25 15:25:50,107 - INFO - Extracted 1214 characters from page 19
+2024-11-25 15:25:50,113 - INFO - Extracted 157 characters from page 20
+2024-11-25 15:25:50,115 - INFO - Extracted 308 characters from page 21
+2024-11-25 15:25:50,118 - INFO - Extracted 261 characters from page 22
+2024-11-25 15:25:50,120 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 15:25:50,296 - INFO - Loading faiss with AVX2 support.
+2024-11-25 15:25:50,915 - INFO - Successfully loaded faiss with AVX2 support.
+2024-11-25 15:25:50,955 - ERROR - Error getting chat response: 'coroutine' object is not subscriptable
+2024-11-25 15:25:50,958 - ERROR - Error in chat endpoint: 'coroutine' object is not subscriptable
+2024-11-25 15:25:50,975 - INFO - 127.0.0.1 - - [25/Nov/2024 15:25:50] "[35m[1mPOST /contractIQ HTTP/1.1[0m" 500 -
+2024-11-25 15:29:02,484 - INFO -  * Detected change in 'C:\\Users\\Ryan Register\\Projects\\clausal-backend\\contract_chat.py', reloading
+2024-11-25 15:29:02,997 - INFO -  * Restarting with stat
+2024-11-25 15:30:03,320 - INFO - Starting Flask server...
+2024-11-25 15:30:03,581 - WARNING - Executing <Task pending name='Task-2' coro=<observe_changes() running at C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\utils.py:114> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\ProgramData\Anaconda3\Lib\asyncio\base_events.py:449> cb=[gather.<locals>._done_callback() at C:\ProgramData\Anaconda3\Lib\asyncio\tasks.py:767] created at C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py:849> took 0.203 seconds
+2024-11-25 15:30:03,627 - INFO - <Server sockets=(<asyncio.TransportSocket fd=1136, family=2, type=1, proto=0, laddr=('127.0.0.1', 5000)>,)> is serving
+2024-11-25 15:30:03,629 - INFO - Running on http://127.0.0.1:5000 (CTRL + C to quit)
+2024-11-25 15:30:22,142 - INFO - Starting contract analysis request
+2024-11-25 15:30:22,148 - ERROR - Error in contract analysis: argument of type 'coroutine' is not iterable
+2024-11-25 15:30:22,165 - ERROR - Error in ASGI Framework
+Traceback (most recent call last):
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1404, in handle_request
+    return await self.full_dispatch_request(request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1443, in full_dispatch_request
+    return await self.finalize_request(result, request_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1569, in finalize_request
+    response = await self.process_response(response, request_context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1626, in process_response
+    response = await self.ensure_async(function)(response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\utils.py", line 57, in _wrapper
+    result = await loop.run_in_executor(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\ProgramData\Anaconda3\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\flask_cors\extension.py", line 191, in cors_after_request
+    normalized_path = unquote_plus(request.path)
+                                   ^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\hypercorn\asyncio\task_group.py", line 27, in _handle
+    await app(scope, receive, send, sync_spawn, call_soon)
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\hypercorn\app_wrappers.py", line 34, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1668, in __call__
+    await self.asgi_app(scope, receive, send)
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1694, in asgi_app
+    await asgi_handler(receive, send)
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\asgi.py", line 52, in __call__
+    raise_task_exceptions(done)
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\utils.py", line 180, in raise_task_exceptions
+    raise task.exception()
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\asgi.py", line 100, in handle_request
+    response = await _handle_exception(self.app, error)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\asgi.py", line 357, in _handle_exception
+    raise error
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\asgi.py", line 98, in handle_request
+    response = await self.app.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\quart\app.py", line 1408, in handle_request
+    return await self.handle_exception(error)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ryan Register\Projects\clausal-backend\venv\Lib\site-packages\flask_cors\extension.py", line 188, in cors_after_request
+    if resp.headers is not None and resp.headers.get(ACL_ORIGIN):
+       ^^^^^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'headers'
+2024-11-25 15:31:03,706 - INFO - Starting Flask server...
+2024-11-25 15:31:03,827 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-25 15:31:03,829 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-25 15:31:03,833 - INFO -  * Restarting with stat
+2024-11-25 15:31:08,660 - INFO - Starting Flask server...
+2024-11-25 15:31:08,724 - WARNING -  * Debugger is active!
+2024-11-25 15:31:08,735 - INFO -  * Debugger PIN: 797-896-514
+2024-11-25 15:31:12,855 - INFO - Starting contract analysis request
+2024-11-25 15:31:12,863 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-25 15:31:12,931 - INFO - PDF has 22 pages
+2024-11-25 15:31:12,945 - INFO - Extracted 2278 characters from page 1
+2024-11-25 15:31:12,954 - INFO - Extracted 2852 characters from page 2
+2024-11-25 15:31:12,966 - INFO - Extracted 2728 characters from page 3
+2024-11-25 15:31:12,974 - INFO - Extracted 2998 characters from page 4
+2024-11-25 15:31:12,985 - INFO - Extracted 2876 characters from page 5
+2024-11-25 15:31:12,998 - INFO - Extracted 3122 characters from page 6
+2024-11-25 15:31:13,018 - INFO - Extracted 3090 characters from page 7
+2024-11-25 15:31:13,031 - INFO - Extracted 3298 characters from page 8
+2024-11-25 15:31:13,046 - INFO - Extracted 2708 characters from page 9
+2024-11-25 15:31:13,057 - INFO - Extracted 2398 characters from page 10
+2024-11-25 15:31:13,073 - INFO - Extracted 2853 characters from page 11
+2024-11-25 15:31:13,091 - INFO - Extracted 2469 characters from page 12
+2024-11-25 15:31:13,102 - INFO - Extracted 2400 characters from page 13
+2024-11-25 15:31:13,112 - INFO - Extracted 2869 characters from page 14
+2024-11-25 15:31:13,122 - INFO - Extracted 1641 characters from page 15
+2024-11-25 15:31:13,130 - INFO - Extracted 1398 characters from page 16
+2024-11-25 15:31:13,136 - INFO - Extracted 1589 characters from page 17
+2024-11-25 15:31:13,141 - INFO - Extracted 1656 characters from page 18
+2024-11-25 15:31:13,147 - INFO - Extracted 1214 characters from page 19
+2024-11-25 15:31:13,151 - INFO - Extracted 157 characters from page 20
+2024-11-25 15:31:13,153 - INFO - Extracted 308 characters from page 21
+2024-11-25 15:31:13,156 - INFO - Extracted 261 characters from page 22
+2024-11-25 15:31:13,160 - INFO - Successfully extracted total of 47184 characters
+2024-11-25 15:31:13,719 - INFO - Starting contract analysis
+2024-11-25 15:31:13,750 - INFO - Split text into 3 chunks
+2024-11-25 15:31:13,751 - INFO - Created 3 chunks for analysis
+2024-11-25 15:31:13,753 - INFO - Analyzing chunk 1/3
+2024-11-25 15:31:29,528 - INFO - Completed analysis of chunk 1/3
+2024-11-25 15:31:29,529 - INFO - Analyzing chunk 2/3
+2024-11-25 15:31:45,603 - INFO - Completed analysis of chunk 2/3
+2024-11-25 15:31:45,604 - INFO - Analyzing chunk 3/3
+2024-11-25 15:32:02,295 - INFO - Completed analysis of chunk 3/3
+2024-11-25 15:32:02,297 - INFO - Completed contract analysis
+2024-11-25 15:32:02,303 - INFO - 127.0.0.1 - - [25/Nov/2024 15:32:02] "POST /analyze HTTP/1.1" 200 -
+2024-11-25 15:32:57,630 - INFO - Starting contract analysis request
+2024-11-25 15:32:57,682 - INFO - Starting PDF text extraction from uploads\Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf
+2024-11-25 15:32:57,718 - INFO - PDF has 9 pages
+2024-11-25 15:32:57,757 - INFO - Extracted 2288 characters from page 1
+2024-11-25 15:32:57,762 - INFO - Extracted 2730 characters from page 2
+2024-11-25 15:32:57,768 - INFO - Extracted 1768 characters from page 3
+2024-11-25 15:32:57,775 - INFO - Extracted 4353 characters from page 4
+2024-11-25 15:32:57,782 - INFO - Extracted 4182 characters from page 5
+2024-11-25 15:32:57,791 - INFO - Extracted 3619 characters from page 6
+2024-11-25 15:32:57,795 - INFO - Extracted 2161 characters from page 7
+2024-11-25 15:32:57,807 - INFO - Extracted 832 characters from page 8
+2024-11-25 15:32:57,814 - INFO - Extracted 465 characters from page 9
+2024-11-25 15:32:57,816 - INFO - Successfully extracted total of 22406 characters
+2024-11-25 15:32:57,818 - INFO - Starting contract analysis
+2024-11-25 15:32:57,832 - INFO - Split text into 2 chunks
+2024-11-25 15:32:57,833 - INFO - Created 2 chunks for analysis
+2024-11-25 15:32:57,835 - INFO - Analyzing chunk 1/2
+2024-11-25 15:33:13,465 - INFO - Completed analysis of chunk 1/2
+2024-11-25 15:33:13,467 - INFO - Analyzing chunk 2/2
+2024-11-25 15:33:29,644 - INFO - Completed analysis of chunk 2/2
+2024-11-25 15:33:29,647 - INFO - Completed contract analysis
+2024-11-25 15:33:29,652 - INFO - 127.0.0.1 - - [25/Nov/2024 15:33:29] "POST /analyze HTTP/1.1" 200 -
