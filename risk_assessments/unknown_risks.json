@@ -1,0 +1,77 @@
+{
+  "risks": [
+    {
+      "title": "Low Base Compensation",
+      "description": "The base salary of $55,440 may be lower than industry standard for the role and location.",
+      "severity": "medium",
+      "category": "compensation",
+      "recommendation": "Research market rates for similar roles and negotiate a higher base salary."
+    },
+    {
+      "title": "Broad Non-Compete Scope",
+      "description": "The non-compete clause covers any business or activity that is in competition with the company, which is very broad in scope.",
+      "severity": "high",
+      "category": "covenants",
+      "recommendation": "Negotiate to narrow the scope to specific products, services or business lines that directly compete with the company."
+    },
+    {
+      "title": "Perpetual Confidentiality Obligation",
+      "description": "The confidentiality obligation has a perpetual duration, which may be overly restrictive.",
+      "severity": "medium",
+      "category": "confidentiality",
+      "recommendation": "Request a time limitation on the confidentiality obligation, such as 3-5 years after termination."
+    },
+    {
+      "title": "Lack of Indemnification Protection",
+      "description": "The contract does not provide any indemnification protection for the contractor.",
+      "severity": "medium",
+      "category": "liability",
+      "recommendation": "Negotiate to include indemnification provisions that protect the contractor from liabilities arising from their work for the company."
+    }
+  ],
+  "summary": {
+    "totalRisks": 4,
+    "highPriorityCount": 1,
+    "mediumPriorityCount": 3,
+    "lowPriorityCount": 0,
+    "risksByCategory": {
+      "compensation": [
+        {
+          "title": "Low Base Compensation",
+          "description": "The base salary of $55,440 may be lower than industry standard for the role and location.",
+          "severity": "medium",
+          "category": "compensation",
+          "recommendation": "Research market rates for similar roles and negotiate a higher base salary."
+        }
+      ],
+      "covenants": [
+        {
+          "title": "Broad Non-Compete Scope",
+          "description": "The non-compete clause covers any business or activity that is in competition with the company, which is very broad in scope.",
+          "severity": "high",
+          "category": "covenants",
+          "recommendation": "Negotiate to narrow the scope to specific products, services or business lines that directly compete with the company."
+        }
+      ],
+      "confidentiality": [
+        {
+          "title": "Perpetual Confidentiality Obligation",
+          "description": "The confidentiality obligation has a perpetual duration, which may be overly restrictive.",
+          "severity": "medium",
+          "category": "confidentiality",
+          "recommendation": "Request a time limitation on the confidentiality obligation, such as 3-5 years after termination."
+        }
+      ],
+      "liability": [
+        {
+          "title": "Lack of Indemnification Protection",
+          "description": "The contract does not provide any indemnification protection for the contractor.",
+          "severity": "medium",
+          "category": "liability",
+          "recommendation": "Negotiate to include indemnification provisions that protect the contractor from liabilities arising from their work for the company."
+        }
+      ]
+    }
+  },
+  "timestamp": "2024-11-26T00:15:27.000710"
+}

@@ -10,6 +10,14 @@ from dotenv import load_dotenv
 from contract_analyzer import ContractAnalyzer
 from dataclasses import asdict
 from contract_chat import ContractChat
+import asyncio
+from asgiref.wsgi import WsgiToAsgi
+from hypercorn.config import Config
+from hypercorn.asyncio import serve
+from quart import Quart, request, jsonify  # Updated to use Quart
+from quart_cors import cors  # Updated to use Quart CORS
+from risk_assessment import ContractRiskAssessor  # Import the risk assessor
+import traceback  # Import traceback for detailed error logging
 
 # Configure logging
 logging.basicConfig(
@@ -24,8 +32,8 @@ logging.basicConfig(
 # Load environment variables
 load_dotenv()
 
-app = Flask(__name__)
-CORS(app)
+app = Quart(__name__)  # Initialize Quart app
+app = cors(app)  # Enable CORS for the app
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
@@ -42,6 +50,9 @@ app.config.update(
     MAX_CONTENT_LENGTH=16 * 1024 * 1024  # 16MB max file size
 )
 
+# Initialize the risk assessor
+risk_assessor = ContractRiskAssessor()
+
 def allowed_file(filename: str) -> bool:
     """Check if file extension is allowed."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -56,22 +67,7 @@ def extract_text_from_pdf(file_path: str) -> str:
         text = []
         for page_num in range(len(doc)):
             page = doc[page_num]
-            
-            # Try different text extraction methods
             page_text = page.get_text()
-            
-            if not page_text.strip():
-                # Try with different flags if standard extraction fails
-                page_text = page.get_text("text", flags=fitz.TEXT_PRESERVE_LIGATURES | 
-                                               fitz.TEXT_PRESERVE_WHITESPACE | 
-                                               fitz.TEXT_PRESERVE_SPANS)
-            
-            if not page_text.strip():
-                # Try raw extraction as last resort
-                page_text = page.get_text("rawdict")
-                if page_text:
-                    page_text = " ".join([b["text"] for b in page_text["blocks"] if "text" in b])
-            
             if page_text:
                 text.append(page_text)
                 logging.info(f"Extracted {len(page_text)} characters from page {page_num + 1}")
@@ -167,8 +163,6 @@ def analyze_contract():
             logging.error(f"Error processing contract: {str(e)}")
             raise
             
-        
-    
     except Exception as e:
         error_message = str(e)
         logging.error(f"Error in contract analysis: {error_message}")
@@ -196,9 +190,11 @@ def request_entity_too_large(error):
 chat_handler = ContractChat()
 
 @app.route('/contractIQ', methods=['POST'])
-def chat_with_contract():
+async def chat_with_contract():
     try:
-        data = request.json
+        data = await request.get_json()
+        logging.info(f"Received chat request: {data}")
+        
         if not data or 'message' not in data or 'contractId' not in data:
             return jsonify({'error': 'Missing required fields'}), 400
 
@@ -209,20 +205,40 @@ def chat_with_contract():
             logging.error(f"Contract not found at: {contract_path}")
             return jsonify({'error': 'Contract not found'}), 404
 
-        # Extract text from contract
-        contract_text = extract_text_from_pdf(contract_path)
-
         # Get chat history
         chat_history = chat_handler.chat_histories.get(data['contractId'], [])
 
-        response = chat_handler.get_response(
-            message=data['message'],
-            contract_id=data['contractId'],
-            contract_text=contract_text,
-            chat_history=chat_history
-        )
+        try:
+            # Get contract text if this is the first message
+            contract_text = None
+            if not chat_history:
+                logging.info("First message - loading contract text")
+                contract_text = extract_text_from_pdf(contract_path)
+                logging.info(f"Extracted {len(contract_text)} characters from contract")
+            else:
+                # Use empty string for contract text since it's already in context
+                contract_text = ""
 
-        return jsonify(asdict(response))
+            logging.info("Getting response from chat handler")
+            response = await chat_handler.get_response(
+                message=data['message'],
+                contract_id=data['contractId'],
+                contract_text=contract_text,
+                chat_history=chat_history
+            )
+            logging.info("Got response from chat handler")
+            
+            response_dict = asdict(response)
+            logging.info("Converted response to dict")
+            
+            return jsonify(response_dict)
+
+        except Exception as e:
+            logging.error(f"Error in chat processing: {str(e)}")
+            return jsonify({
+                'error': 'Chat processing error',
+                'details': str(e)
+            }), 500
 
     except Exception as e:
         logging.error(f"Error in chat endpoint: {str(e)}")
@@ -231,9 +247,100 @@ def chat_with_contract():
             'details': str(e)
         }), 500
 
-if __name__ == '__main__':
-    if not os.getenv('ANTHROPIC_API_KEY'):
-        raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+@app.route('/riskassess', methods=['POST'])
+async def assess_contract_risks():
+    """Endpoint for assessing contract risks."""
+    try:
+        data = await request.get_json()
+        logging.info(f"Received risk assessment request with data: {data}")
         
-    logging.info("Starting Flask server...")
-    app.run(debug=True)
+        contract_id = data.get('contract_id')
+        if not contract_id:
+            logging.error("Missing contract_id in request")
+            return jsonify({'error': 'Missing contract_id'}), 400
+
+        logging.info(f"Looking for contract analysis with ID: {contract_id}")
+
+        # First try to get cached assessment
+        cached_assessment = await risk_assessor.get_cached_assessment(contract_id)
+        if cached_assessment:
+            logging.info("Found cached assessment")
+            return jsonify(asdict(cached_assessment))
+
+        # Log the contents of the response folder
+        response_files = os.listdir(app.config['RESPONSE_FOLDER'])
+        logging.info(f"Available response files: {response_files}")
+
+        # Find the most recent analysis file for this contract
+        matching_files = [f for f in response_files if f.startswith(contract_id)]
+        if not matching_files:
+            logging.error(f"No analysis files found for contract_id: {contract_id}")
+            return jsonify({
+                'error': 'Contract analysis not found',
+                'details': f'No analysis file found for ID {contract_id}'
+            }), 404
+
+        # Sort by timestamp and get the most recent
+        response_file = sorted(matching_files)[-1]
+        logging.info(f"Using most recent analysis file: {response_file}")
+
+        # Load the contract analysis
+        analysis_path = os.path.join(app.config['RESPONSE_FOLDER'], response_file)
+        logging.info(f"Loading analysis from: {analysis_path}")
+        
+        try:
+            with open(analysis_path, 'r', encoding='utf-8') as f:
+                file_content = f.read()
+                logging.info(f"File content (first 200 chars): {file_content[:200]}")
+                contract_analysis = json.loads(file_content)
+                logging.info("Successfully loaded and parsed contract analysis")
+                
+                # Extract the actual analysis data from the nested structure
+                contract_data = contract_analysis.get('analysis', {})
+                if isinstance(contract_data, dict) and 'analysis' in contract_data:
+                    contract_data = contract_data['analysis']
+                
+                logging.info(f"Extracted contract data structure: {list(contract_data.keys())}")
+                
+        except json.JSONDecodeError as e:
+            logging.error(f"JSON parsing error: {str(e)}")
+            logging.error(f"Error location: line {e.lineno}, column {e.colno}")
+            with open(analysis_path, 'r', encoding='utf-8') as f:
+                problematic_line = f.readlines()[e.lineno - 1]
+                logging.error(f"Problematic line: {problematic_line}")
+            return jsonify({
+                'error': 'Invalid JSON in analysis file',
+                'details': f'JSON parsing error at line {e.lineno}, column {e.colno}'
+            }), 500
+        except Exception as e:
+            logging.error(f"Error loading contract analysis: {str(e)}")
+            logging.error(f"Traceback: {traceback.format_exc()}")
+            return jsonify({
+                'error': 'Error loading contract analysis',
+                'details': str(e)
+            }), 500
+
+        # Perform risk assessment
+        try:
+            assessment_result = await risk_assessor.assess_risks(contract_data)
+            logging.info("Successfully completed risk assessment")
+            return jsonify(asdict(assessment_result))
+        except Exception as e:
+            logging.error(f"Error during risk assessment: {str(e)}")
+            logging.error(f"Traceback: {traceback.format_exc()}")
+            return jsonify({
+                'error': 'Risk assessment failed',
+                'details': str(e)
+            }), 500
+
+    except Exception as e:
+        logging.error(f"Error in risk assessment endpoint: {str(e)}")
+        logging.error(f"Traceback: {traceback.format_exc()}")
+        return jsonify({
+            'error': 'Server error',
+            'details': str(e)
+        }), 500
+
+if __name__ == '__main__':
+    logging.info("Starting Quart server...")
+    app.run(debug=True, host='0.0.0.0', port=5000)  # Run the Quart app

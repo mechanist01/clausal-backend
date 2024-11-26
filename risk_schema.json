@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "risks": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "description": "Brief title of the risk"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Detailed description of the risk"
+                    },
+                    "severity": {
+                        "type": "string",
+                        "enum": ["high", "medium", "low"],
+                        "description": "Risk severity level"
+                    },
+                    "category": {
+                        "type": "string",
+                        "enum": [
+                            "compensation",
+                            "termination",
+                            "ip",
+                            "covenants",
+                            "confidentiality",
+                            "liability"
+                        ],
+                        "description": "Category of the risk matching contract sections"
+                    },
+                    "recommendation": {
+                        "type": "string",
+                        "description": "Specific recommendation to address or mitigate the risk"
+                    }
+                },
+                "required": ["title", "description", "severity", "category"]
+            }
+        }
+    },
+    "required": ["risks"]
+}

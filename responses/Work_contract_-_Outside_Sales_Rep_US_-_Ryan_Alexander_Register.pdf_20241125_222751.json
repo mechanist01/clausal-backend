@@ -1,0 +1,114 @@
+{
+  "timestamp": "2024-11-25T22:27:51.438392",
+  "original_filename": "Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf",
+  "analysis": {
+    "analysis": {
+      "metadata": {
+        "contractDate": "2021-12-23",
+        "parties": {
+          "company": "Veo Technologies, Inc.",
+          "contractor": "Ryan Alexander Register"
+        },
+        "governingLaw": "laws of the State of Florida"
+      },
+      "classification": {
+        "type": "EMPLOYMENT",
+        "primaryCharacteristics": [
+          "full-time employment",
+          "reports to manager",
+          "eligible for company benefits"
+        ]
+      },
+      "compensation": {
+        "baseCompensation": {
+          "type": "SALARY",
+          "amount": 55440,
+          "currency": null,
+          "frequency": "ANNUAL",
+          "isGuaranteed": true
+        },
+        "commission": {
+          "type": null,
+          "baseRate": 23760,
+          "tiers": [],
+          "caps": {
+            "exists": false
+          }
+        }
+      },
+      "termination": {
+        "noticePeriod": {
+          "days": 0,
+          "isReciprocal": true
+        },
+        "immediateTerminationClauses": [],
+        "postTerminationObligations": [
+          "During employment and for six (6) months thereafter, not entice or solicit employees, contractors, officers, agents or suppliers of the Group",
+          "During employment and for six (6) months thereafter, not canvass, solicit or interfere with customers or prospective customers of the Group"
+        ]
+      },
+      "intellectualProperty": {
+        "ownership": {
+          "workProduct": "COMPANY",
+          "scope": []
+        },
+        "moralRights": {
+          "waived": false,
+          "scope": []
+        }
+      },
+      "restrictiveCovenants": {
+        "nonCompete": {
+          "duration": 0.25,
+          "geographicScope": [
+            "any state in the United States in which the Group operates",
+            "any state in the United States in which the Group had demonstrable plans to operate"
+          ],
+          "businessScope": [
+            "any business or activity that is in competition with the Group"
+          ],
+          "exceptions": []
+        },
+        "nonSolicitation": {
+          "applies": {
+            "customers": false,
+            "employees": false,
+            "suppliers": false
+          },
+          "exceptions": [],
+          "duration": 6
+        }
+      },
+      "confidentiality": {
+        "scope": [
+          "Confidential Information",
+          "Developments"
+        ],
+        "duration": {
+          "type": "PERPETUAL"
+        },
+        "exceptions": [
+          "reporting violations of law",
+          "legal proceedings under seal",
+          "responding to government inquiries"
+        ]
+      },
+      "liability": {
+        "indemnification": {
+          "scope": [],
+          "limitations": [],
+          "insuranceRequired": false
+        },
+        "limitations": {
+          "capsExist": false,
+          "exclusions": []
+        }
+      }
+    },
+    "metadata": {
+      "timestamp": "2024-11-25T22:27:51.438392",
+      "filename": "Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf",
+      "filesize": 365066
+    }
+  }
+}
