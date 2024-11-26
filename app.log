@@ -2007,3 +2007,92 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
             "description": "The base salary of $55,440 may be lower than industry standard for the role and location.",
        
 2024-11-26 00:15:27,008 - INFO - Successfully completed risk assessment
+2024-11-26 00:32:14,851 - INFO - ContractRiskAssessor initialized successfully
+2024-11-26 00:32:14,854 - INFO - ContractChat initialized successfully
+2024-11-26 00:32:14,859 - INFO - Starting Flask server...
+2024-11-26 00:32:14,974 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.99.84:5000
+2024-11-26 00:32:14,975 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-26 00:32:14,980 - INFO -  * Restarting with stat
+2024-11-26 00:32:18,453 - INFO - ContractRiskAssessor initialized successfully
+2024-11-26 00:32:18,455 - INFO - ContractChat initialized successfully
+2024-11-26 00:32:18,461 - INFO - Starting Flask server...
+2024-11-26 00:32:18,536 - WARNING -  * Debugger is active!
+2024-11-26 00:32:18,567 - INFO -  * Debugger PIN: 797-896-514
+2024-11-26 00:32:31,487 - INFO - Starting contract analysis request
+2024-11-26 00:32:31,497 - INFO - Starting PDF text extraction from uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-26 00:32:31,559 - INFO - PDF has 22 pages
+2024-11-26 00:32:31,594 - INFO - Extracted 2278 characters from page 1
+2024-11-26 00:32:31,607 - INFO - Extracted 2852 characters from page 2
+2024-11-26 00:32:31,617 - INFO - Extracted 2728 characters from page 3
+2024-11-26 00:32:31,628 - INFO - Extracted 2998 characters from page 4
+2024-11-26 00:32:31,640 - INFO - Extracted 2876 characters from page 5
+2024-11-26 00:32:31,652 - INFO - Extracted 3122 characters from page 6
+2024-11-26 00:32:31,662 - INFO - Extracted 3090 characters from page 7
+2024-11-26 00:32:31,674 - INFO - Extracted 3298 characters from page 8
+2024-11-26 00:32:31,684 - INFO - Extracted 2708 characters from page 9
+2024-11-26 00:32:31,695 - INFO - Extracted 2398 characters from page 10
+2024-11-26 00:32:31,707 - INFO - Extracted 2853 characters from page 11
+2024-11-26 00:32:31,715 - INFO - Extracted 2469 characters from page 12
+2024-11-26 00:32:31,723 - INFO - Extracted 2400 characters from page 13
+2024-11-26 00:32:31,734 - INFO - Extracted 2869 characters from page 14
+2024-11-26 00:32:31,743 - INFO - Extracted 1641 characters from page 15
+2024-11-26 00:32:31,753 - INFO - Extracted 1398 characters from page 16
+2024-11-26 00:32:31,759 - INFO - Extracted 1589 characters from page 17
+2024-11-26 00:32:31,766 - INFO - Extracted 1656 characters from page 18
+2024-11-26 00:32:31,771 - INFO - Extracted 1214 characters from page 19
+2024-11-26 00:32:31,775 - INFO - Extracted 157 characters from page 20
+2024-11-26 00:32:31,778 - INFO - Extracted 308 characters from page 21
+2024-11-26 00:32:31,782 - INFO - Extracted 261 characters from page 22
+2024-11-26 00:32:31,786 - INFO - Successfully extracted total of 47184 characters
+2024-11-26 00:32:32,420 - INFO - Starting contract analysis
+2024-11-26 00:32:32,497 - INFO - Split text into 3 chunks
+2024-11-26 00:32:32,498 - INFO - Created 3 chunks for analysis
+2024-11-26 00:32:32,501 - INFO - Analyzing chunk 1/3
+2024-11-26 00:32:46,928 - INFO - Completed analysis of chunk 1/3
+2024-11-26 00:32:46,930 - INFO - Analyzing chunk 2/3
+2024-11-26 00:33:02,673 - INFO - Completed analysis of chunk 2/3
+2024-11-26 00:33:02,677 - INFO - Analyzing chunk 3/3
+2024-11-26 00:33:17,817 - INFO - Completed analysis of chunk 3/3
+2024-11-26 00:33:17,819 - INFO - Completed contract analysis
+2024-11-26 00:33:17,824 - INFO - 127.0.0.1 - - [26/Nov/2024 00:33:17] "POST /analyze HTTP/1.1" 200 -
+2024-11-26 00:33:29,515 - INFO - 127.0.0.1 - - [26/Nov/2024 00:33:29] "OPTIONS /contractIQ HTTP/1.1" 200 -
+2024-11-26 00:33:29,779 - INFO - Received chat request: {'message': 'can they deduct refunds?', 'contractId': 'deel-Hilary_Wagner-contract-38epgwj_1.pdf', 'chatHistory': [{'id': '1732599209202', 'role': 'user', 'content': 'can they deduct refunds?', 'timestamp': '2024-11-26T05:33:29.202Z'}]}
+2024-11-26 00:33:29,780 - INFO - Looking for contract at: uploads\deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-26 00:33:29,781 - INFO - Getting response from chat handler
+2024-11-26 00:33:29,782 - INFO - Processing message for contract deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-26 00:33:29,783 - INFO - Setting up new contract context
+2024-11-26 00:33:29,784 - INFO - Sending request to Claude
+2024-11-26 00:33:41,934 - INFO - Got response from Claude: 200
+2024-11-26 00:33:41,935 - INFO - Successfully processed Claude's response
+2024-11-26 00:33:41,978 - INFO - Got response from chat handler
+2024-11-26 00:33:41,980 - INFO - Converted response to dict
+2024-11-26 00:33:41,984 - INFO - 127.0.0.1 - - [26/Nov/2024 00:33:41] "POST /contractIQ HTTP/1.1" 200 -
+2024-11-26 00:33:49,921 - INFO - 127.0.0.1 - - [26/Nov/2024 00:33:49] "OPTIONS /riskassess HTTP/1.1" 200 -
+2024-11-26 00:33:50,187 - INFO - Received risk assessment request with data: {'contract_id': 'deel-Hilary_Wagner-contract-38epgwj_1.pdf'}
+2024-11-26 00:33:50,188 - INFO - Looking for contract analysis with ID: deel-Hilary_Wagner-contract-38epgwj_1.pdf
+2024-11-26 00:33:50,190 - INFO - Available response files: ['deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241125_152225.json', 'deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241125_152441.json', 'deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241125_153202.json', 'deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241125_222630.json', 'deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241126_003317.json', 'Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf_20241125_153329.json', 'Work_contract_-_Outside_Sales_Rep_US_-_Ryan_Alexander_Register.pdf_20241125_222751.json']
+2024-11-26 00:33:50,192 - INFO - Using most recent analysis file: deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241126_003317.json
+2024-11-26 00:33:50,193 - INFO - Loading analysis from: responses\deel-Hilary_Wagner-contract-38epgwj_1.pdf_20241126_003317.json
+2024-11-26 00:33:50,218 - INFO - File content (first 200 chars): {
+  "timestamp": "2024-11-26T00:33:17.821308",
+  "original_filename": "deel-Hilary_Wagner-contract-38epgwj_1.pdf",
+  "analysis": {
+    "analysis": {
+      "metadata": {
+        "contractDate": "2024-0
+2024-11-26 00:33:50,223 - INFO - Successfully loaded and parsed contract analysis
+2024-11-26 00:33:50,225 - INFO - Extracted contract data structure: ['metadata', 'classification', 'compensation', 'termination', 'intellectualProperty', 'restrictiveCovenants', 'confidentiality', 'liability']
+2024-11-26 00:33:50,227 - INFO - Starting risk assessment
+2024-11-26 00:33:50,229 - INFO - Sending request to Claude
+2024-11-26 00:33:57,756 - INFO - Received response from Claude: {
+  "risks": [
+    {
+      "title": "No Guaranteed Compensation",
+      "description": "The compensation is entirely commission-based, with no guaranteed base pay.",
+      "severity": "high",
+      "c
+2024-11-26 00:33:57,800 - INFO - Successfully completed risk assessment
+2024-11-26 00:33:57,808 - INFO - 127.0.0.1 - - [26/Nov/2024 00:33:57] "POST /riskassess HTTP/1.1" 200 -

@@ -1,77 +1,109 @@
 {
   "risks": [
     {
-      "title": "Low Base Compensation",
-      "description": "The base salary of $55,440 may be lower than industry standard for the role and location.",
-      "severity": "medium",
+      "title": "No Guaranteed Compensation",
+      "description": "The compensation is entirely commission-based, with no guaranteed base pay.",
+      "severity": "high",
       "category": "compensation",
-      "recommendation": "Research market rates for similar roles and negotiate a higher base salary."
+      "recommendation": "Negotiate for a minimum base salary or guaranteed minimum compensation"
     },
     {
-      "title": "Broad Non-Compete Scope",
-      "description": "The non-compete clause covers any business or activity that is in competition with the company, which is very broad in scope.",
+      "title": "Immediate Termination Without Notice",
+      "description": "The contract allows for immediate termination without notice for various reasons.",
+      "severity": "high",
+      "category": "termination",
+      "recommendation": "Negotiate for a notice period or severance pay upon termination without cause"
+    },
+    {
+      "title": "Broad IP Assignment",
+      "description": "All work product and intellectual property is assigned to the company, with no exclusions.",
+      "severity": "high",
+      "category": "ip",
+      "recommendation": "Negotiate for exclusions for pre-existing work and personal projects"
+    },
+    {
+      "title": "Broad Non-Compete",
+      "description": "The non-compete clause has no geographic or business scope limitations.",
       "severity": "high",
       "category": "covenants",
-      "recommendation": "Negotiate to narrow the scope to specific products, services or business lines that directly compete with the company."
+      "recommendation": "Negotiate to limit the non-compete to specific geographic regions and business activities"
     },
     {
       "title": "Perpetual Confidentiality Obligation",
-      "description": "The confidentiality obligation has a perpetual duration, which may be overly restrictive.",
+      "description": "The confidentiality obligation has no time limit, extending indefinitely.",
       "severity": "medium",
       "category": "confidentiality",
-      "recommendation": "Request a time limitation on the confidentiality obligation, such as 3-5 years after termination."
+      "recommendation": "Negotiate for a reasonable time limit on confidentiality obligations"
     },
     {
-      "title": "Lack of Indemnification Protection",
-      "description": "The contract does not provide any indemnification protection for the contractor.",
-      "severity": "medium",
+      "title": "Open-Ended Indemnification",
+      "description": "The indemnification clause has no limitations or exclusions.",
+      "severity": "high",
       "category": "liability",
-      "recommendation": "Negotiate to include indemnification provisions that protect the contractor from liabilities arising from their work for the company."
+      "recommendation": "Negotiate for reasonable limitations and exclusions on indemnification obligations"
     }
   ],
   "summary": {
-    "totalRisks": 4,
-    "highPriorityCount": 1,
-    "mediumPriorityCount": 3,
+    "totalRisks": 6,
+    "highPriorityCount": 5,
+    "mediumPriorityCount": 1,
     "lowPriorityCount": 0,
     "risksByCategory": {
       "compensation": [
         {
-          "title": "Low Base Compensation",
-          "description": "The base salary of $55,440 may be lower than industry standard for the role and location.",
-          "severity": "medium",
+          "title": "No Guaranteed Compensation",
+          "description": "The compensation is entirely commission-based, with no guaranteed base pay.",
+          "severity": "high",
           "category": "compensation",
-          "recommendation": "Research market rates for similar roles and negotiate a higher base salary."
+          "recommendation": "Negotiate for a minimum base salary or guaranteed minimum compensation"
+        }
+      ],
+      "termination": [
+        {
+          "title": "Immediate Termination Without Notice",
+          "description": "The contract allows for immediate termination without notice for various reasons.",
+          "severity": "high",
+          "category": "termination",
+          "recommendation": "Negotiate for a notice period or severance pay upon termination without cause"
+        }
+      ],
+      "ip": [
+        {
+          "title": "Broad IP Assignment",
+          "description": "All work product and intellectual property is assigned to the company, with no exclusions.",
+          "severity": "high",
+          "category": "ip",
+          "recommendation": "Negotiate for exclusions for pre-existing work and personal projects"
         }
       ],
       "covenants": [
         {
-          "title": "Broad Non-Compete Scope",
-          "description": "The non-compete clause covers any business or activity that is in competition with the company, which is very broad in scope.",
+          "title": "Broad Non-Compete",
+          "description": "The non-compete clause has no geographic or business scope limitations.",
           "severity": "high",
           "category": "covenants",
-          "recommendation": "Negotiate to narrow the scope to specific products, services or business lines that directly compete with the company."
+          "recommendation": "Negotiate to limit the non-compete to specific geographic regions and business activities"
         }
       ],
       "confidentiality": [
         {
           "title": "Perpetual Confidentiality Obligation",
-          "description": "The confidentiality obligation has a perpetual duration, which may be overly restrictive.",
+          "description": "The confidentiality obligation has no time limit, extending indefinitely.",
           "severity": "medium",
           "category": "confidentiality",
-          "recommendation": "Request a time limitation on the confidentiality obligation, such as 3-5 years after termination."
+          "recommendation": "Negotiate for a reasonable time limit on confidentiality obligations"
         }
       ],
       "liability": [
         {
-          "title": "Lack of Indemnification Protection",
-          "description": "The contract does not provide any indemnification protection for the contractor.",
-          "severity": "medium",
+          "title": "Open-Ended Indemnification",
+          "description": "The indemnification clause has no limitations or exclusions.",
+          "severity": "high",
           "category": "liability",
-          "recommendation": "Negotiate to include indemnification provisions that protect the contractor from liabilities arising from their work for the company."
+          "recommendation": "Negotiate for reasonable limitations and exclusions on indemnification obligations"
         }
       ]
     }
   },
-  "timestamp": "2024-11-26T00:15:27.000710"
+  "timestamp": "2024-11-26T00:33:57.797087"
 }

@@ -10,14 +10,10 @@ from dotenv import load_dotenv
 from contract_analyzer import ContractAnalyzer
 from dataclasses import asdict
 from contract_chat import ContractChat
+from risk_assessment import ContractRiskAssessor
+import traceback
 import asyncio
-from asgiref.wsgi import WsgiToAsgi
-from hypercorn.config import Config
-from hypercorn.asyncio import serve
-from quart import Quart, request, jsonify  # Updated to use Quart
-from quart_cors import cors  # Updated to use Quart CORS
-from risk_assessment import ContractRiskAssessor  # Import the risk assessor
-import traceback  # Import traceback for detailed error logging
+from functools import wraps
 
 # Configure logging
 logging.basicConfig(
@@ -32,8 +28,8 @@ logging.basicConfig(
 # Load environment variables
 load_dotenv()
 
-app = Quart(__name__)  # Initialize Quart app
-app = cors(app)  # Enable CORS for the app
+app = Flask(__name__)
+CORS(app)
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
@@ -50,8 +46,16 @@ app.config.update(
     MAX_CONTENT_LENGTH=16 * 1024 * 1024  # 16MB max file size
 )
 
-# Initialize the risk assessor
+# Initialize handlers
 risk_assessor = ContractRiskAssessor()
+chat_handler = ContractChat()
+
+# Helper function to run async code in Flask
+def async_route(f):
+    @wraps(f)
+    def wrapped(*args, **kwargs):
+        return asyncio.run(f(*args, **kwargs))
+    return wrapped
 
 def allowed_file(filename: str) -> bool:
     """Check if file extension is allowed."""
@@ -179,20 +183,11 @@ def health_check():
         'timestamp': datetime.now().isoformat()
     })
 
-@app.errorhandler(413)
-def request_entity_too_large(error):
-    """Handle file size limit exceeded error."""
-    return jsonify({
-        'error': 'File too large',
-        'details': 'The file size exceeds the maximum allowed limit of 16MB'
-    }), 413
-
-chat_handler = ContractChat()
-
 @app.route('/contractIQ', methods=['POST'])
+@async_route
 async def chat_with_contract():
     try:
-        data = await request.get_json()
+        data = request.get_json()
         logging.info(f"Received chat request: {data}")
         
         if not data or 'message' not in data or 'contractId' not in data:
@@ -248,10 +243,11 @@ async def chat_with_contract():
         }), 500
 
 @app.route('/riskassess', methods=['POST'])
+@async_route
 async def assess_contract_risks():
     """Endpoint for assessing contract risks."""
     try:
-        data = await request.get_json()
+        data = request.get_json()
         logging.info(f"Received risk assessment request with data: {data}")
         
         contract_id = data.get('contract_id')
@@ -302,6 +298,10 @@ async def assess_contract_risks():
                 
                 logging.info(f"Extracted contract data structure: {list(contract_data.keys())}")
                 
+                assessment_result = await risk_assessor.assess_risks(contract_data)
+                logging.info("Successfully completed risk assessment")
+                return jsonify(asdict(assessment_result))
+                
         except json.JSONDecodeError as e:
             logging.error(f"JSON parsing error: {str(e)}")
             logging.error(f"Error location: line {e.lineno}, column {e.colno}")
@@ -320,19 +320,6 @@ async def assess_contract_risks():
                 'details': str(e)
             }), 500
 
-        # Perform risk assessment
-        try:
-            assessment_result = await risk_assessor.assess_risks(contract_data)
-            logging.info("Successfully completed risk assessment")
-            return jsonify(asdict(assessment_result))
-        except Exception as e:
-            logging.error(f"Error during risk assessment: {str(e)}")
-            logging.error(f"Traceback: {traceback.format_exc()}")
-            return jsonify({
-                'error': 'Risk assessment failed',
-                'details': str(e)
-            }), 500
-
     except Exception as e:
         logging.error(f"Error in risk assessment endpoint: {str(e)}")
         logging.error(f"Traceback: {traceback.format_exc()}")
@@ -341,6 +328,14 @@ async def assess_contract_risks():
             'details': str(e)
         }), 500
 
+@app.errorhandler(413)
+def request_entity_too_large(error):
+    """Handle file size limit exceeded error."""
+    return jsonify({
+        'error': 'File too large',
+        'details': 'The file size exceeds the maximum allowed limit of 16MB'
+    }), 413
+
 if __name__ == '__main__':
-    logging.info("Starting Quart server...")
-    app.run(debug=True, host='0.0.0.0', port=5000)  # Run the Quart app
+    logging.info("Starting Flask server...")
+    app.run(debug=True, host='0.0.0.0', port=5000)
