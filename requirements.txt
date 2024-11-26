@@ -7,7 +7,7 @@ hypercorn==0.15.0
 
 # File Handling and Utilities
 Werkzeug==2.3.7
-PyMuPDF==1.23.8
+pymupdf==1.22.5  # Changed from PyMuPDF to pymupdf
 python-dotenv==1.0.0
 
 # Data Processing
