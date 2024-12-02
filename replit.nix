@@ -3,9 +3,7 @@
       pkgs.rustc
       pkgs.libiconv
       pkgs.cargo
-      pkgs.python3
-      pkgs.python3Packages.pip  # Changed from pkgs.pip
-      pkgs.replitPackages.stderred
+      pkgs.python3Full
       # PDF dependencies
       pkgs.mupdf
       pkgs.ghostscript
@@ -21,9 +19,8 @@
       pkgs.gcc
     ];
     env = {
-        PYTHONBIN = "${pkgs.python3}/bin/python3";
+        PYTHONBIN = "${pkgs.python3Full}/bin/python3";
         LANG = "en_US.UTF-8";
-        STDERREDBIN = "${pkgs.replitPackages.stderred}/bin/stderred";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             pkgs.mupdf
             pkgs.ghostscript
