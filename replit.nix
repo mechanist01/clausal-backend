@@ -4,7 +4,7 @@
       pkgs.libiconv
       pkgs.cargo
       pkgs.python3
-      pkgs.pip
+      pkgs.python3Packages.pip  # Changed from pkgs.pip
       pkgs.replitPackages.stderred
       # PDF dependencies
       pkgs.mupdf
