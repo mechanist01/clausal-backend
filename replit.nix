@@ -3,9 +3,8 @@
       pkgs.rustc
       pkgs.libiconv
       pkgs.cargo
-      pkgs.python310Full
+      pkgs.python3
       pkgs.pip
-      pkgs.replitPackages.prybar-python3
       pkgs.replitPackages.stderred
       # PDF dependencies
       pkgs.mupdf
@@ -22,10 +21,9 @@
       pkgs.gcc
     ];
     env = {
-        PYTHONBIN = "${pkgs.python310Full}/bin/python3.10";
+        PYTHONBIN = "${pkgs.python3}/bin/python3";
         LANG = "en_US.UTF-8";
         STDERREDBIN = "${pkgs.replitPackages.stderred}/bin/stderred";
-        PRYBAR_PYTHON_BIN = "${pkgs.replitPackages.prybar-python3}/bin/prybar-python3";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             pkgs.mupdf
             pkgs.ghostscript
