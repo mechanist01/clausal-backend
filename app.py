@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 import logging
 from contract_chat import ChatMessage
-import fitz  # PyMuPDF
+import PyMuPDF  # PyMuPDF
 from datetime import datetime, timezone, UTC
 from dotenv import load_dotenv
 from contract_analyzer import ContractAnalyzer
@@ -111,7 +111,7 @@ def extract_text_from_pdf(file_path: str) -> str:
     """Extract text content from PDF file."""
     logging.info(f"Starting PDF text extraction from {file_path}")
     try:
-        doc = fitz.open(file_path)
+        doc = PyMuPDF.open(file_path)
         logging.info(f"PDF has {len(doc)} pages")
         
         text = []
