@@ -1,11 +1,14 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from werkzeug.utils import secure_filename
 import os
+import hashlib
 import json
 from datetime import datetime
 import logging
+from contract_chat import ChatMessage
 import fitz  # PyMuPDF
+from datetime import datetime, timezone, UTC
 from dotenv import load_dotenv
 from contract_analyzer import ContractAnalyzer
 from dataclasses import asdict
@@ -14,6 +17,12 @@ from risk_assessment import ContractRiskAssessor
 import traceback
 import asyncio
 from functools import wraps
+from supabase import create_client
+from auth import requires_auth, AuthError
+from jose import jwt  # New import for JWT handling
+from dotenv import load_dotenv
+import uuid  # New import for UUID generation
+load_dotenv()  # Add this before accessing environment variables
 
 # Configure logging
 logging.basicConfig(
@@ -29,7 +38,25 @@ logging.basicConfig(
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, 
+     resources={r"/*": {
+         "origins": "http://localhost:3000",  # Single origin instead of list
+         "supports_credentials": True,
+         "allow_headers": ["Content-Type", "Authorization"],
+         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+     }})
+
+@app.after_request
+def after_request(response):
+    origin = request.headers.get('Origin')
+    if origin and origin == 'http://localhost:3000':
+        response.headers.add('Access-Control-Allow-Origin', origin)
+        response.headers.add('Access-Control-Allow-Credentials', 'true')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    if request.method == 'OPTIONS':
+        response.headers.add('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+        response.headers.add('Access-Control-Max-Age', '3600')
+    return response
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
@@ -49,6 +76,25 @@ app.config.update(
 # Initialize handlers
 risk_assessor = ContractRiskAssessor()
 chat_handler = ContractChat()
+
+SUPABASE_URL = "https://pfxdwmwwfmxiqnjworyc.supabase.co"
+SUPABASE_KEY = os.getenv('SUPABASE_KEY')
+
+# Initialize Supabase without auth header first
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+AUTH0_CLIENT_SECRET = os.getenv('AUTH0_CLIENT_SECRET')
+
+def get_user_id_from_token(auth_header):
+    """Extract user ID from Auth0 token"""
+    try:
+        token = auth_header.split(' ')[1]
+        payload = jwt.get_unverified_claims(token)
+        return payload['sub']  # Auth0 user ID
+    except Exception as e:
+        logging.error(f"Error extracting user ID: {e}")
+        raise AuthError({"code": "invalid_token",
+                        "description": "Could not parse user ID from token"}, 401)
 
 # Helper function to run async code in Flask
 def async_route(f):
@@ -109,13 +155,43 @@ def save_analysis_response(original_filename: str, response_data: dict) -> str:
     
     return response_filename
 
-@app.route('/analyze', methods=['POST'])
+@app.route('/analyze', methods=['POST', 'OPTIONS'])
+@requires_auth
 def analyze_contract():
     """Endpoint for analyzing contract documents."""
     logging.info("Starting contract analysis request")
     file_path = None
     
     try:
+        # Get user ID from token
+        auth_header = request.headers.get('Authorization')
+        auth0_user_id = get_user_id_from_token(auth_header)
+        logging.info(f"Processing request for Auth0 user: {auth0_user_id}")
+        
+        # Query auth.users instead of public.users
+        user_query = supabase.rpc('get_auth_user', {'auth0_id': auth0_user_id}).execute()
+        user_uuid = None
+
+        if user_query.data:
+            user_uuid = user_query.data[0]['id']
+            logging.info(f"Found existing user: {user_uuid}")
+        else:
+            # Create new user with RPC call
+            user_uuid = str(uuid.uuid4())
+            user_data = {
+                'id': user_uuid,
+                'auth0_user_id': auth0_user_id,
+                'raw_user_meta_data': {
+                    'auth0_id': auth0_user_id
+                },
+                'is_anonymous': False,
+                'is_sso_user': True
+            }
+            
+            # Use RPC to create auth user
+            supabase.rpc('create_auth_user', {'user_data': user_data}).execute()
+            logging.info(f"Created new user: {user_uuid}")
+
         # Validate file upload
         if 'file' not in request.files:
             return jsonify({'error': 'No file uploaded'}), 400
@@ -134,33 +210,53 @@ def analyze_contract():
         try:
             file.save(file_path)
             
-            # Extract text content
+            # Extract and analyze content
             file_content = extract_text_from_pdf(file_path)
-            
-            # Initialize analyzer
             analyzer = ContractAnalyzer()
-            
-            # Analyze contract
             analysis_result = analyzer.analyze_contract(file_content)
             
-            # Convert dataclass to dict for JSON serialization
-            analysis_dict = {
-                'analysis': asdict(analysis_result),
-                'metadata': {
-                    'timestamp': datetime.now().isoformat(),
-                    'filename': filename,
-                    'filesize': os.path.getsize(file_path)
-                }
+            # Prepare metadata
+            current_time = datetime.now(UTC).isoformat()
+            file_size = os.path.getsize(file_path)
+            
+            metadata = {
+                'timestamp': current_time,
+                'filesize': file_size,
+                'analysis_version': '1.0',
+                'file_hash': hashlib.md5(file_content.encode()).hexdigest()
             }
             
-            # Save response
-            saved_filename = save_analysis_response(filename, analysis_dict)
+            # Create contract record
+            contract_data = {
+                'filename': filename,
+                'user_id': user_uuid,
+                'metadata': metadata,
+                'created_at': current_time,
+            }
             
+            logging.info(f"Creating contract for user {user_uuid}")
+            contract = supabase.from_('contracts').insert(contract_data).execute()
+            
+            if not contract.data:
+                raise Exception("Failed to create contract record")
+                
+            contract_id = contract.data[0]['id']
+            
+            # Store analysis results
+            analysis_data = {
+                'contract_id': contract_id,
+                'analysis': asdict(analysis_result),
+                'created_at': current_time
+            }
+            
+            supabase.from_('analysis_results').insert(analysis_data).execute()
+            logging.info(f"Stored analysis results for contract {contract_id}")
+
             return jsonify({
                 'status': 'success',
-                'analysis': analysis_dict['analysis'],
-                'metadata': analysis_dict['metadata'],
-                'saved_response_file': saved_filename
+                'contractId': contract_id,
+                'analysis': asdict(analysis_result),
+                'metadata': metadata
             })
             
         except Exception as e:
@@ -184,149 +280,200 @@ def health_check():
     })
 
 @app.route('/contractIQ', methods=['POST'])
+@requires_auth
 @async_route
 async def chat_with_contract():
     try:
         data = request.get_json()
-        logging.info(f"Received chat request: {data}")
+        if not data:
+            return jsonify({'error': 'No request data provided'}), 400
+
+        auth_header = request.headers.get('Authorization')
+        if not auth_header:
+            return jsonify({'error': 'No authorization header'}), 401
+
+        # Get user ID from token
+        try:
+            auth0_user_id = get_user_id_from_token(auth_header)
+            logging.info(f"Auth0 user ID: {auth0_user_id}")
+            
+            # Query for user UUID from auth0_user_id
+            user_query = supabase.rpc('get_auth_user', {'auth0_id': auth0_user_id}).execute()
+            if not user_query.data:
+                logging.error(f"User not found for auth0_id: {auth0_user_id}")
+                return jsonify({'error': 'User not found'}), 404
+                
+            user_uuid = user_query.data[0]['id']
+            logging.info(f"Found user UUID: {user_uuid}")
+            
+        except Exception as e:
+            logging.error(f"Error processing user authentication: {str(e)}")
+            return jsonify({'error': 'Authentication failed'}), 401
         
-        if not data or 'message' not in data or 'contractId' not in data:
+        # Validate required fields
+        if 'message' not in data or 'contractId' not in data:
             return jsonify({'error': 'Missing required fields'}), 400
 
-        contract_path = os.path.join(app.config['UPLOAD_FOLDER'], data['contractId'])
+        # Query the contract with user verification
+        contract_query = supabase.from_('contracts').select('*').eq('id', data['contractId']).execute()
+        
+        if not contract_query.data or len(contract_query.data) == 0:
+            return jsonify({'error': 'Contract not found'}), 404
+
+        contract = contract_query.data[0]
+        
+        # Verify user owns the contract
+        if str(contract.get('user_id')) != str(user_uuid):
+            logging.warning(f"Access denied: User {user_uuid} attempted to access contract {data['contractId']}")
+            return jsonify({'error': 'You do not have permission to access this contract'}), 403
+
+        # Query analysis results for contract text
+        analysis_query = supabase.from_('analysis_results').select('*').eq('contract_id', data['contractId']).execute()
+        
+        if not analysis_query.data or len(analysis_query.data) == 0:
+            return jsonify({'error': 'Contract analysis not found'}), 404
+
+        # Look up the file using the filename from the contract record
+        contract_path = os.path.join(app.config['UPLOAD_FOLDER'], contract['filename'])
         logging.info(f"Looking for contract at: {contract_path}")
 
         if not os.path.exists(contract_path):
-            logging.error(f"Contract not found at: {contract_path}")
-            return jsonify({'error': 'Contract not found'}), 404
+            logging.error(f"Contract file not found at: {contract_path}")
+            return jsonify({'error': 'Contract file not found'}), 404
 
         # Get chat history
         chat_history = chat_handler.chat_histories.get(data['contractId'], [])
 
         try:
-            # Get contract text if this is the first message
+            # Always extract text for first message or if context is missing
             contract_text = None
-            if not chat_history:
-                logging.info("First message - loading contract text")
-                contract_text = extract_text_from_pdf(contract_path)
-                logging.info(f"Extracted {len(contract_text)} characters from contract")
+            if not chat_history or data['contractId'] not in chat_handler.contract_contexts:
+                logging.info("Loading contract text")
+                try:
+                    contract_text = extract_text_from_pdf(contract_path)
+                    logging.info(f"Successfully extracted {len(contract_text)} characters from contract")
+                    # Store the contract text in the context
+                    if data['contractId'] not in chat_handler.contract_contexts:
+                        chat_handler.contract_contexts[data['contractId']] = {
+                            'contract_text': contract_text,
+                            'system_prompt': """You are an expert contract analyst assistant. You have been provided with a contract to analyze. 
+                            When responding to questions:
+                            1. Always refer to specific sections of the contract when relevant
+                            2. Quote the exact text when making important points
+                            3. Be clear about what the contract explicitly states vs what is implied
+                            4. If something is not addressed in the contract, say so explicitly
+                            5. Provide balanced analysis considering both parties' perspectives
+                            6. Use clear, professional language
+                            7. Focus on accuracy and precision in your interpretations"""
+                        }
+                        logging.info(f"Stored contract text in context for {data['contractId']}")
+                except Exception as e:
+                    logging.error(f"Failed to extract text from PDF: {str(e)}")
+                    return jsonify({'error': 'Failed to read contract file'}), 500
             else:
-                # Use empty string for contract text since it's already in context
-                contract_text = ""
+                logging.info("Using existing contract context")
+                contract_text = chat_handler.contract_contexts[data['contractId']]['contract_text']
+                logging.info(f"Retrieved contract text from context, length: {len(contract_text)}")
 
-            logging.info("Getting response from chat handler")
+            # Get the response from chat handler
             response = await chat_handler.get_response(
                 message=data['message'],
                 contract_id=data['contractId'],
                 contract_text=contract_text,
                 chat_history=chat_history
             )
-            logging.info("Got response from chat handler")
+
+            # Store the chat message in Supabase
+            chat_message = {
+                'contract_id': data['contractId'],
+                'user_id': user_uuid,
+                'role': response.role,
+                'content': response.content,
+                'created_at': datetime.now().isoformat(),
+                'contract_reference': response.contractReference if hasattr(response, 'contractReference') else None
+            }
+
+            try:
+                # Store message in Supabase
+                supabase.from_('chat_messages').insert(chat_message).execute()
+            except Exception as e:
+                logging.error(f"Failed to store chat message in Supabase: {str(e)}")
+                # Continue with response even if storage fails
             
-            response_dict = asdict(response)
-            logging.info("Converted response to dict")
-            
-            return jsonify(response_dict)
+            # Format response
+            return jsonify({
+                'id': str(datetime.now().timestamp()),  # Updated to use timestamp as ID
+                'role': response.role,
+                'content': response.content,
+                'contractReference': response.contractReference if hasattr(response, 'contractReference') else None,
+                'timestamp': datetime.now().isoformat()
+            })
 
         except Exception as e:
-            logging.error(f"Error in chat processing: {str(e)}")
+            logging.error(f"Chat processing error: {str(e)}")
+            logging.error(traceback.format_exc())
             return jsonify({
-                'error': 'Chat processing error',
+                'error': 'Failed to process chat message',
                 'details': str(e)
             }), 500
 
     except Exception as e:
         logging.error(f"Error in chat endpoint: {str(e)}")
+        logging.error(traceback.format_exc())
         return jsonify({
             'error': 'Server error',
             'details': str(e)
         }), 500
 
 @app.route('/riskassess', methods=['POST'])
+@requires_auth
 @async_route
 async def assess_contract_risks():
-    """Endpoint for assessing contract risks."""
     try:
         data = request.get_json()
-        logging.info(f"Received risk assessment request with data: {data}")
-        
+        auth_header = request.headers.get('Authorization')
+        if not auth_header:
+            return jsonify({'error': 'No authorization header'}), 401
+
+        # Get user ID from token
+        auth0_user_id = get_user_id_from_token(auth_header)
         contract_id = data.get('contract_id')
-        if not contract_id:
-            logging.error("Missing contract_id in request")
-            return jsonify({'error': 'Missing contract_id'}), 400
 
-        logging.info(f"Looking for contract analysis with ID: {contract_id}")
-
-        # First try to get cached assessment
-        cached_assessment = await risk_assessor.get_cached_assessment(contract_id)
-        if cached_assessment:
-            logging.info("Found cached assessment")
-            return jsonify(asdict(cached_assessment))
-
-        # Log the contents of the response folder
-        response_files = os.listdir(app.config['RESPONSE_FOLDER'])
-        logging.info(f"Available response files: {response_files}")
-
-        # Find the most recent analysis file for this contract
-        matching_files = [f for f in response_files if f.startswith(contract_id)]
-        if not matching_files:
-            logging.error(f"No analysis files found for contract_id: {contract_id}")
-            return jsonify({
-                'error': 'Contract analysis not found',
-                'details': f'No analysis file found for ID {contract_id}'
-            }), 404
-
-        # Sort by timestamp and get the most recent
-        response_file = sorted(matching_files)[-1]
-        logging.info(f"Using most recent analysis file: {response_file}")
-
-        # Load the contract analysis
-        analysis_path = os.path.join(app.config['RESPONSE_FOLDER'], response_file)
-        logging.info(f"Loading analysis from: {analysis_path}")
+        # Query Supabase for the analysis results
+        analysis_query = supabase.from_('analysis_results') \
+            .select('*') \
+            .eq('contract_id', contract_id) \
+            .single() \
+            .execute()
         
-        try:
-            with open(analysis_path, 'r', encoding='utf-8') as f:
-                file_content = f.read()
-                logging.info(f"File content (first 200 chars): {file_content[:200]}")
-                contract_analysis = json.loads(file_content)
-                logging.info("Successfully loaded and parsed contract analysis")
-                
-                # Extract the actual analysis data from the nested structure
-                contract_data = contract_analysis.get('analysis', {})
-                if isinstance(contract_data, dict) and 'analysis' in contract_data:
-                    contract_data = contract_data['analysis']
-                
-                logging.info(f"Extracted contract data structure: {list(contract_data.keys())}")
-                
-                assessment_result = await risk_assessor.assess_risks(contract_data)
-                logging.info("Successfully completed risk assessment")
-                return jsonify(asdict(assessment_result))
-                
-        except json.JSONDecodeError as e:
-            logging.error(f"JSON parsing error: {str(e)}")
-            logging.error(f"Error location: line {e.lineno}, column {e.colno}")
-            with open(analysis_path, 'r', encoding='utf-8') as f:
-                problematic_line = f.readlines()[e.lineno - 1]
-                logging.error(f"Problematic line: {problematic_line}")
-            return jsonify({
-                'error': 'Invalid JSON in analysis file',
-                'details': f'JSON parsing error at line {e.lineno}, column {e.colno}'
-            }), 500
-        except Exception as e:
-            logging.error(f"Error loading contract analysis: {str(e)}")
-            logging.error(f"Traceback: {traceback.format_exc()}")
-            return jsonify({
-                'error': 'Error loading contract analysis',
-                'details': str(e)
-            }), 500
+        if not analysis_query.data:
+            return jsonify({'error': 'Analysis results not found'}), 404
+
+        # If risk assessment already exists, return it
+        if analysis_query.data.get('risk_assessment'):
+            logging.info(f"Found existing risk assessment for contract {contract_id}")
+            return jsonify(analysis_query.data['risk_assessment'])
+
+        # Assess risks using the analysis data
+        assessment_result = await risk_assessor.assess_risks(analysis_query.data['analysis'])
+        
+        # Save risk assessment back to analysis_results
+        update_query = supabase.from_('analysis_results') \
+            .update({
+                'risk_assessment': asdict(assessment_result)
+            }) \
+            .eq('contract_id', contract_id) \
+            .execute()
+
+        if update_query.error:
+            raise Exception(f"Failed to save risk assessment: {update_query.error}")
+
+        return jsonify(asdict(assessment_result))
 
     except Exception as e:
-        logging.error(f"Error in risk assessment endpoint: {str(e)}")
+        logging.error(f"Error in risk assessment: {str(e)}")
         logging.error(f"Traceback: {traceback.format_exc()}")
-        return jsonify({
-            'error': 'Server error',
-            'details': str(e)
-        }), 500
+        return jsonify({'error': str(e)}), 500
 
 @app.errorhandler(413)
 def request_entity_too_large(error):
@@ -335,6 +482,11 @@ def request_entity_too_large(error):
         'error': 'File too large',
         'details': 'The file size exceeds the maximum allowed limit of 16MB'
     }), 413
+
+# Add error handler
+@app.errorhandler(AuthError)
+def handle_auth_error(ex):
+    return jsonify(ex.error), ex.status_code
 
 if __name__ == '__main__':
     logging.info("Starting Flask server...")

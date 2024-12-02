@@ -62,10 +62,14 @@ class ContractChat:
         """Get a response from the contract expert."""
         try:
             logging.info(f"Processing message for contract {contract_id}")
+            logging.info(f"Contract text exists: {bool(contract_text)}")
+            if contract_text:
+                logging.info(f"Contract text length: {len(contract_text)}")
+                logging.info(f"First 500 chars of contract: {contract_text[:500] if contract_text else 'None'}")
             
-            # Initialize context for this contract if not exists
             if contract_id not in self.contract_contexts:
                 logging.info("Setting up new contract context")
+                logging.info(f"Initializing with contract text length: {len(contract_text) if contract_text else 0}")
                 self.contract_contexts[contract_id] = {
                     'contract_text': contract_text,
                     'system_prompt': """You are an expert contract analyst assistant. You have been provided with a contract to analyze. 
@@ -78,12 +82,15 @@ class ContractChat:
                     6. Use clear, professional language
                     7. Focus on accuracy and precision in your interpretations"""
                 }
+            else:
+                logging.info("Using existing contract context")
+                logging.info(f"Existing context contract text length: {len(self.contract_contexts[contract_id]['contract_text'])}")
 
-            # Prepare messages
             messages = []
+            logging.info("=== Building Message History ===")
             
-            # Add contract text in chunks if it's a new conversation
-            if not chat_history:
+            if not chat_history or contract_id not in self.contract_contexts:
+                logging.info("Starting new conversation with contract")
                 messages.append({
                     'role': 'user',
                     'content': f"Here is the contract to analyze:\n\n{contract_text}\n\nPlease acknowledge that you've received the contract."
@@ -93,58 +100,86 @@ class ContractChat:
                     'content': "I have received the contract and am ready to help analyze it. What would you like to know about the contract?"
                 })
             
-            # Add recent chat history (last 3 messages)
             if chat_history:
+                logging.info(f"Adding {len(chat_history[-3:])} messages from history")
                 for msg in chat_history[-3:]:
                     messages.append({
                         'role': msg['role'],
                         'content': msg['content']
                     })
             
-            # Add current message
+            if messages and messages[0]['role'] != 'user':
+                logging.info("Adding contract text for context")
+                messages.insert(0, {
+                    'role': 'user',
+                    'content': f"Here is the contract to analyze:\n\n{self.contract_contexts[contract_id]['contract_text']}\n\nPlease analyze this contract."
+                })
+            
             messages.append({
                 'role': 'user',
                 'content': message
             })
+            logging.info(f"Added current user message: {message}")
+
+            logging.info("=== Preparing Claude API Request ===")
+            request_data = {
+                'model': self.model,
+                'max_tokens': 1000,
+                'messages': messages,
+                'system': self.contract_contexts[contract_id]['system_prompt'],
+                'temperature': 0.7
+            }
+            logging.info(f"Message count in request: {len(messages)}")
+            logging.info(f"First message role: {messages[0]['role']}")
+            logging.info(f"First message content length: {len(messages[0]['content'])}")
 
             logging.info("Sending request to Claude")
             async with aiohttp.ClientSession() as session:
                 async with session.post(
                     'https://api.anthropic.com/v1/messages',
                     headers=self.headers,
-                    json={
-                        'model': self.model,
-                        'max_tokens': 1000,
-                        'messages': messages,
-                        'system': self.contract_contexts[contract_id]['system_prompt'],
-                        'temperature': 0.7
-                    }
+                    json=request_data
                 ) as response:
                     response_text = await response.text()
                     logging.info(f"Got response from Claude: {response.status}")
                     
                     if response.status != 200:
-                        logging.error(f"Claude API error: {response_text}")
-                        raise Exception(f"API error: {response_text}")
+                        error_msg = f"Claude API error: {response_text}"
+                        logging.error(error_msg)
+                        raise ValueError(error_msg)
                     
-                    result = json.loads(response_text)
-                    assistant_message = result['content'][0]['text']
-                    logging.info("Successfully processed Claude's response")
+                    try:
+                        result = json.loads(response_text)
+                        if not result.get('content') or not isinstance(result['content'], list):
+                            raise ValueError("Invalid response format: missing content array")
+                            
+                        content_item = result['content'][0]
+                        if not content_item.get('text'):
+                            raise ValueError("Invalid response format: missing text in content")
+                            
+                        assistant_message = content_item['text']
+                        logging.info("Successfully processed Claude's response")
+                        logging.info(f"Response length: {len(assistant_message)}")
 
-                    chat_message = ChatMessage(
-                        id=str(datetime.now().timestamp()),
-                        role='assistant',
-                        content=assistant_message,
-                        timestamp=datetime.now().isoformat()
-                    )
+                        chat_message = ChatMessage(
+                            id=str(datetime.now().timestamp()),
+                            role='assistant',
+                            content=assistant_message,
+                            timestamp=datetime.now().isoformat()
+                        )
 
-                    if not chat_history:
-                        chat_history = []
-                    chat_history.append(asdict(chat_message))
-                    self._save_chat_history(contract_id, chat_history)
+                        if not chat_history:
+                            chat_history = []
+                        chat_history.append(asdict(chat_message))
+                        self._save_chat_history(contract_id, chat_history)
 
-                    return chat_message
+                        return chat_message
+                        
+                    except (json.JSONDecodeError, KeyError, ValueError) as e:
+                        error_msg = f"Error parsing Claude response: {str(e)}"
+                        logging.error(f"{error_msg}. Response text: {response_text}")
+                        raise ValueError(error_msg)
 
         except Exception as e:
-            logging.error(f"Error getting chat response: {str(e)}")
-            raise
+            logging.error(f"Error in get_response: {str(e)}")
+            raise ValueError(f"Failed to process chat message: {str(e)}")

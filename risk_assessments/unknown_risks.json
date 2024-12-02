@@ -1,109 +1,107 @@
 {
   "risks": [
     {
-      "title": "No Guaranteed Compensation",
-      "description": "The compensation is entirely commission-based, with no guaranteed base pay.",
+      "title": "No Minimum Base Compensation",
+      "description": "The contract does not specify a minimum base compensation amount, suggesting the contractor may receive little or no pay if projects/sales are limited.",
       "severity": "high",
       "category": "compensation",
-      "recommendation": "Negotiate for a minimum base salary or guaranteed minimum compensation"
+      "recommendation": "Negotiate to include a reasonable minimum base salary or retainer to ensure some guaranteed income."
     },
     {
-      "title": "Immediate Termination Without Notice",
-      "description": "The contract allows for immediate termination without notice for various reasons.",
-      "severity": "high",
+      "title": "Immediate Termination Causes",
+      "description": "The contract allows for immediate termination for vaguely defined reasons like 'Poor-Quality Work', giving the company broad discretion.",
+      "severity": "medium",
       "category": "termination",
-      "recommendation": "Negotiate for a notice period or severance pay upon termination without cause"
+      "recommendation": "Request clearly defined quality standards and a notice/cure period before termination for 'Poor-Quality Work' type issues."
     },
     {
-      "title": "Broad IP Assignment",
-      "description": "All work product and intellectual property is assigned to the company, with no exclusions.",
+      "title": "Unlimited Contractor Liability",
+      "description": "The contract does not cap the contractor's liability for indemnification obligations, potentially exposing them to significant financial risk.",
       "severity": "high",
-      "category": "ip",
-      "recommendation": "Negotiate for exclusions for pre-existing work and personal projects"
+      "category": "liability",
+      "recommendation": "Negotiate to include a reasonable liability cap aligned with the contractor's fee or access to insurance coverage."
     },
     {
-      "title": "Broad Non-Compete",
-      "description": "The non-compete clause has no geographic or business scope limitations.",
-      "severity": "high",
-      "category": "covenants",
-      "recommendation": "Negotiate to limit the non-compete to specific geographic regions and business activities"
+      "title": "No Notice Period for Termination",
+      "description": "The contract allows for immediate termination by the company without any notice period for the contractor.",
+      "severity": "medium",
+      "category": "termination",
+      "recommendation": "Request a reasonable notice period (e.g. 30 days) before termination to provide transition time."
     },
     {
       "title": "Perpetual Confidentiality Obligation",
-      "description": "The confidentiality obligation has no time limit, extending indefinitely.",
+      "description": "The confidentiality obligations last perpetually, which may be unreasonable for some types of information.",
       "severity": "medium",
       "category": "confidentiality",
-      "recommendation": "Negotiate for a reasonable time limit on confidentiality obligations"
+      "recommendation": "Negotiate time limits on confidentiality, such as 3-5 years after contract termination, for certain non-sensitive information."
     },
     {
-      "title": "Open-Ended Indemnification",
-      "description": "The indemnification clause has no limitations or exclusions.",
-      "severity": "high",
-      "category": "liability",
-      "recommendation": "Negotiate for reasonable limitations and exclusions on indemnification obligations"
+      "title": "Non-Solicitation of Unspecified Parties",
+      "description": "The non-solicitation clause covers unspecified customers, employees, and suppliers, which may be overly broad.",
+      "severity": "medium",
+      "category": "covenants",
+      "recommendation": "Request that the non-solicitation be limited to parties directly involved with the contractor's work for the company."
     }
   ],
   "summary": {
     "totalRisks": 6,
-    "highPriorityCount": 5,
-    "mediumPriorityCount": 1,
+    "highPriorityCount": 2,
+    "mediumPriorityCount": 4,
     "lowPriorityCount": 0,
     "risksByCategory": {
       "compensation": [
         {
-          "title": "No Guaranteed Compensation",
-          "description": "The compensation is entirely commission-based, with no guaranteed base pay.",
+          "title": "No Minimum Base Compensation",
+          "description": "The contract does not specify a minimum base compensation amount, suggesting the contractor may receive little or no pay if projects/sales are limited.",
           "severity": "high",
           "category": "compensation",
-          "recommendation": "Negotiate for a minimum base salary or guaranteed minimum compensation"
+          "recommendation": "Negotiate to include a reasonable minimum base salary or retainer to ensure some guaranteed income."
         }
       ],
       "termination": [
         {
-          "title": "Immediate Termination Without Notice",
-          "description": "The contract allows for immediate termination without notice for various reasons.",
-          "severity": "high",
+          "title": "Immediate Termination Causes",
+          "description": "The contract allows for immediate termination for vaguely defined reasons like 'Poor-Quality Work', giving the company broad discretion.",
+          "severity": "medium",
           "category": "termination",
-          "recommendation": "Negotiate for a notice period or severance pay upon termination without cause"
+          "recommendation": "Request clearly defined quality standards and a notice/cure period before termination for 'Poor-Quality Work' type issues."
+        },
+        {
+          "title": "No Notice Period for Termination",
+          "description": "The contract allows for immediate termination by the company without any notice period for the contractor.",
+          "severity": "medium",
+          "category": "termination",
+          "recommendation": "Request a reasonable notice period (e.g. 30 days) before termination to provide transition time."
         }
       ],
-      "ip": [
+      "liability": [
         {
-          "title": "Broad IP Assignment",
-          "description": "All work product and intellectual property is assigned to the company, with no exclusions.",
+          "title": "Unlimited Contractor Liability",
+          "description": "The contract does not cap the contractor's liability for indemnification obligations, potentially exposing them to significant financial risk.",
           "severity": "high",
-          "category": "ip",
-          "recommendation": "Negotiate for exclusions for pre-existing work and personal projects"
-        }
-      ],
-      "covenants": [
-        {
-          "title": "Broad Non-Compete",
-          "description": "The non-compete clause has no geographic or business scope limitations.",
-          "severity": "high",
-          "category": "covenants",
-          "recommendation": "Negotiate to limit the non-compete to specific geographic regions and business activities"
+          "category": "liability",
+          "recommendation": "Negotiate to include a reasonable liability cap aligned with the contractor's fee or access to insurance coverage."
         }
       ],
       "confidentiality": [
         {
           "title": "Perpetual Confidentiality Obligation",
-          "description": "The confidentiality obligation has no time limit, extending indefinitely.",
+          "description": "The confidentiality obligations last perpetually, which may be unreasonable for some types of information.",
           "severity": "medium",
           "category": "confidentiality",
-          "recommendation": "Negotiate for a reasonable time limit on confidentiality obligations"
+          "recommendation": "Negotiate time limits on confidentiality, such as 3-5 years after contract termination, for certain non-sensitive information."
         }
       ],
-      "liability": [
+      "covenants": [
         {
-          "title": "Open-Ended Indemnification",
-          "description": "The indemnification clause has no limitations or exclusions.",
-          "severity": "high",
-          "category": "liability",
-          "recommendation": "Negotiate for reasonable limitations and exclusions on indemnification obligations"
+          "title": "Non-Solicitation of Unspecified Parties",
+          "description": "The non-solicitation clause covers unspecified customers, employees, and suppliers, which may be overly broad.",
+          "severity": "medium",
+          "category": "covenants",
+          "recommendation": "Request that the non-solicitation be limited to parties directly involved with the contractor's work for the company."
         }
       ]
     }
   },
-  "timestamp": "2024-11-26T00:33:57.797087"
+  "timestamp": "2024-12-02T14:17:41.509071"
 }
