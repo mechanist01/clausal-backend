@@ -19,7 +19,7 @@
       pkgs.gcc
     ];
     env = {
-        PYTHONBIN = "${pkgs.python310Full}/bin/python3.10"";
+        PYTHONBIN = "${pkgs.python310Full}/bin/python3.9";
         LANG = "en_US.UTF-8";
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
             pkgs.mupdf
